@@ -1,0 +1,56 @@
+.page-template-holding {
+  main {
+    background-color: $color-white;
+    height: 100vh;
+    min-height: unset;
+  }
+}
+
+.holding-page {
+  @include backgroundCover;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  margin: 1.5rem;
+  .heading-secondary {
+    &--main {
+      span {
+        text-transform: lowercase;
+        vertical-align: text-top;
+      }
+    }
+  }
+  .holding-links {
+    text-align: center;
+    .links {
+      list-style: none;
+      display: flex;
+      @include respond(phone) {
+        flex-direction: column;
+        li {
+          border-right: none;
+          padding-top: 2rem;
+        }
+      }
+      a {
+        color: $color-white;
+      }
+
+      li:last-of-type {
+        border-right: none;
+      }
+    }
+    li {
+      padding: 0 3rem;
+      border-right: 1px solid $color-white;
+    }
+  }
+  .company-info {
+    img {
+      height: 6rem;
+    }
+  }
+}
