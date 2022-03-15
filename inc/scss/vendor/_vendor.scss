@@ -861,43 +861,30 @@ img.mfp-img {
   max-width: 165px;
   margin: 4.2rem 0 0 0;
   width: 100%;
-  background-color: #006b5a;
   position: relative;
+  text-align: center;
 }
 .timeline-slide .circle {
-  border: 4px #fff solid;
-  background-color: #b7852c;
+  background-color: $color-primary;
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-redius: 50%;
-  height: 16px;
-  width: 16px;
+  height: 1rem;
+  width: 1rem;
   position: absolute;
   left: 50%;
-  margin-left: -15px;
-  top: -70px;
+  transform: translate(-50%);
+  top: -2rem;
   z-index: 2000;
   overflow: visible;
 }
 .timeline-copy {
-  font-size: 0.7em;
   color: #fff;
-  background-color: #006b5a;
   margin: 1rem;
   padding-bottom: 5px;
 }
-.timeline-slide .vertical-line {
-  border-left: 3px #b7852c solid;
-  height: 50px;
-  position: absolute;
-  left: 50%;
-  margin-left: -4.5px;
-  top: -50px;
-  z-index: 1000;
-}
+
 .timeline-slide .timeline-copy h3 {
-  font-size: 2.5rem;
-  font-weight: 800;
   margin-bottom: 0px;
 }
 .timeline-slide .timeline-copy {
@@ -911,60 +898,7 @@ img.mfp-img {
 .timeline-container .owl-stage {
   margin-left: 18px;
 }
-.owl-carousel .owl-dots .owl-dot {
-  width: 15px;
-  height: 15px;
-  background: #e6c996;
-  border-radius: 100%;
-  display: inline-block;
-  margin: 0 5px;
-}
-.owl-carousel .owl-dots {
-  text-align: center;
-  margin-top: 1em;
-}
-.owl-carousel .owl-nav .owl-prev {
-  width: 18px;
-  height: 33px;
-  background: url(/images/ico-arrow-left.svg) no-repeat center;
-}
-.owl-prev:after {
-  z-index: 1000;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  /* 	border-right-color: #ECF9EA; */
-  border-right-color: #ecf9ea;
-  right: -18px;
-  top: 3px;
-  border-width: 14px;
-  margin-top: -15px;
-}
-.owl-carousel .owl-nav .owl-next {
-  background: #ecf9ea;
-}
-.owl-next:after {
-  z-index: 1000;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  border-left-color: #ecf9ea;
-  /*   border-left-color: #000; */
-  left: -18px;
-  top: 18px;
-  border-width: 14px;
-  margin-top: -30px;
-}
-.owl-prev span {
-  display: none;
-}
-.owl-next span {
-  display: none;
-}
+
 /* .owl-prev, .owl-next {
 
 } */
@@ -977,5 +911,28 @@ button:focus {
   .timeline-slide {
     margin-top: 4.2rem;
     margin-left: 3.5rem;
+  }
+}
+.timeline-slider {
+  @include backgroundCover;
+  position: relative;
+  &:after {
+    content: "";
+    width: 100%;
+    border-bottom: dashed 1px $color-primary;
+    position: absolute;
+    left: 0;
+    top: 43.7%;
+    z-index: 1;
+  }
+  .owl-stage-outer {
+  }
+}
+.slider-holder {
+  text-align: center;
+
+  padding: 5rem 0;
+  .desktop-carousel {
+    padding: 10rem 0 5rem;
   }
 }

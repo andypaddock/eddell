@@ -50,6 +50,8 @@ get_header(); ?>
 <?php get_template_part('template-parts/modal');?>
 <?php elseif( get_row_layout() == 'timeline-slider' ):?>
 <?php get_template_part('template-parts/timeline-slider');?>
+<?php elseif( get_row_layout() == 'staff_block' ):?>
+<?php get_template_part('template-parts/staffblock');?>
 <?php endif; ?>
 <?php endwhile; ?>
 <?php endif; ?>

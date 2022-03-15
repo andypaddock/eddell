@@ -291,6 +291,7 @@ $('.timeline').owlCarousel({
   paginationNumbers: false,
   nav:true,
   center:false,
+  dots:false,
   margin:10,
   responsive:{
     0:{

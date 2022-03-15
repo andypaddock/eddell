@@ -4,9 +4,15 @@
   -moz-perspective: 150rem;
   position: relative;
   height: 52rem;
+  .rotate {
+    i {
+      font-size: 3rem;
+      color: $color-primary;
+    }
+  }
 
   &__side {
-    height: 52rem;
+    height: 40rem;
     transition: all 0.8s ease;
     position: absolute;
     top: 0;
@@ -20,15 +26,21 @@
 
     &--front {
       background: rgba(22, 18, 8, 1);
-      padding: 4rem;
+      padding: 4rem 2rem;
+      display: flex;
+      flex-direction: column;
       .content-title {
         text-align: center;
         padding: 2rem 0;
+        flex: 1;
+        .heading-tertiary {
+          font-size: 1.7rem;
+        }
       }
     }
 
     &--back {
-      padding: 4rem;
+      padding: 4rem 2rem;
       background: rgba(22, 18, 8, 1);
       transform: rotateY(180deg);
     }
@@ -45,32 +57,19 @@
   // FRONT SIDE STYLING
   &__picture {
     background-size: cover;
-    height: 15rem;
+    height: 12rem;
+    display: flex;
+    justify-content: center;
     background-blend-mode: screen;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
-
-    // &--1 {
-    //   background: rgba(22, 18, 8, 1);
-    // }
-
-    // &--2 {
-    //   background-image: linear-gradient(
-    //       to right bottom,
-    //       $color-primary-light,
-    //       $color-primary-dark
-    //     ),
-    //     url(../img/nat-6.jpg);
-    // }
-
-    // &--3 {
-    //   background-image: linear-gradient(
-    //       to right bottom,
-    //       $color-tertiary-light,
-    //       $color-tertiary-dark
-    //     ),
-    //     url(../img/nat-7.jpg);
-    // }
+    i {
+      font-size: 6rem;
+      color: $color-primary;
+    }
+    img {
+      width: 100%;
+    }
   }
 
   &__heading {
@@ -146,12 +145,15 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding: 2rem;
+    padding: 2rem 0;
     .content-text {
-      padding: 0 4rem;
       flex-grow: 1;
       @include respond(phone) {
         padding: 0;
+      }
+      p {
+        font-size: 1.3rem;
+        font-weight: 300;
       }
     }
     .content-title {
@@ -220,6 +222,31 @@
 
     &__price-value {
       font-size: 4rem;
+    }
+  }
+}
+.staff-block {
+  .card {
+    &__side {
+      border-radius: 0;
+      &--front {
+        padding: 0;
+        background: transparent;
+      }
+    }
+    &__picture {
+      border-radius: 0;
+      height: 25rem;
+      img {
+        object-fit: cover;
+      }
+    }
+    &__title {
+      text-align: center;
+      p {
+        color: $color-primary;
+        font-weight: 300;
+      }
     }
   }
 }

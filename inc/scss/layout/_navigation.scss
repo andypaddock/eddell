@@ -12,7 +12,6 @@
 .footer-navbar {
   display: inline-flex;
   position: relative;
-  background: $color-primary-bg;
   ul {
     list-style: none;
     display: flex;
@@ -33,6 +32,7 @@
   transform: scaleX(1.05);
 }
 .top-navbar {
+  background: $color-primary-bg;
   .logo {
     svg {
       height: 3rem;

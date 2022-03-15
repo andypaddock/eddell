@@ -6,45 +6,6 @@
 ?>
 <footer class="footer">
     <?php if (!is_page_template('page-templates/holding.php')):?>
-    <?php $footerSwitch = get_field('footer_override');
-            if ($footerSwitch == 'alternate'): ?>
-
-
-    <?php $footerImage = get_field('footer_image'); ?>
-    <div class="gradient-footer">
-        <div class="footer-hero"
-            style="background-image: linear-gradient(180deg, rgba(34, 27, 11,1) 0%, rgba(34, 27, 11,0) 30%), url(<?php echo $footerImage['url']; ?>)">
-            <div class="footer-text-container">
-                <div class="row centre-line w40">
-                    <div class="line"></div>
-                    <div></div>
-                </div>
-                <div class="row w40">
-                    <div class="footer_text">
-                        <h1 class="heading-secondary">
-                            <span class="heading-secondary"><?php the_field('footer_main_text'); ?></span>
-                        </h1>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="footer_link">
-                    <?php 
-$link = get_field('footer_link');
-if( $link ): 
-    $link_url = $link['url'];
-    $link_title = $link['title'];
-    $link_target = $link['target'] ? $link['target'] : '_self';
-    ?>
-                    <a class="footer_button" href="<?php echo esc_url( $link_url ); ?>"
-                        target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?><span
-                            class="link-arrow arrow-right"></span></a>
-                    <?php endif; ?>
-                </div>
-            </div>
-        </div>
-    </div>
-    <?php elseif ($footerSwitch == 'main'):?>
     <?php $footerImage = get_field('footer_image','options'); ?>
     <div class="gradient-footer">
         <div class="footer-hero"
@@ -55,6 +16,7 @@ if( $link ):
                     <div class="footer-contact">
                         <div class="logo"><a
                                 href="<?php echo site_url(); ?>"><?php get_template_part("inc/img/eddelllogo"); ?></a>
+                            <div class="contact-block"><?php the_field('contact_block','options'); ?></div>
                         </div>
                         <div class="footer-newsletter">
 
@@ -121,7 +83,7 @@ if( $link ):
             </div>
         </div>
     </div>
-    <?php endif;?>
+
 
 
 
