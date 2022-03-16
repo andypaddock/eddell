@@ -3,7 +3,7 @@
     <div class="row w80">
         <div class="news-header">
             <h2 class="heading-tertiary alt-text">More News</h2>
-            <div class="slash">/</div>
+            <div class="slash">&#183;</div>
         </div>
         <div class="post-grid filter-grid">
             <?php
@@ -31,7 +31,7 @@ $counter++;
                     <?php echo get_the_date( 'd/m/y' ); ?>
                 </span>
                 <h2 class="heading-tertiary alt-text"><?php the_title(  ); ?></h2>
-                <div class="slash">/</div>
+                <div class="slash">&#183;</div>
                 <div class="post-excerpt">
                     <?php the_excerpt(  ); ?>
                 </div>
