@@ -19,8 +19,10 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     margin: 2rem 0;
+    padding: 0 8rem;
     p {
-      font-size: 2rem;
+      font-size: 1.7rem;
+      color: $color-primary;
       letter-spacing: 0.1rem;
     }
     @include respond(phone) {
@@ -61,6 +63,16 @@
       opacity: 0;
       left: -12px;
     }
+  }
+  .owl-prev,
+  .owl-next {
+    top: 0;
+  }
+  .owl-prev {
+    left: 1rem;
+  }
+  .owl-next {
+    right: 1rem;
   }
 }
 .testimonial-block {

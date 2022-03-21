@@ -3,7 +3,7 @@
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 52rem;
+  height: 42rem;
   .rotate {
     i {
       font-size: 3rem;
@@ -57,14 +57,14 @@
   // FRONT SIDE STYLING
   &__picture {
     background-size: cover;
-    height: 12rem;
+    // height: 12rem;
     display: flex;
     justify-content: center;
     background-blend-mode: screen;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     i {
-      font-size: 6rem;
+      font-size: 4.5rem;
       color: $color-primary;
     }
     img {
@@ -153,7 +153,8 @@
       }
       p {
         font-size: 1.3rem;
-        font-weight: 300;
+        font-weight: 200;
+        line-height: 1.8rem;
       }
     }
     .content-title {
@@ -248,5 +249,10 @@
         font-weight: 300;
       }
     }
+  }
+}
+.staff-block {
+  .card__side {
+    height: 45rem;
   }
 }

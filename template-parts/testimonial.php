@@ -6,7 +6,6 @@
             <?php while( have_rows('short_testimonial','options') ): the_row(); ?>
 
             <div class="quote">
-                <?php get_template_part("inc/img/quote"); ?>
                 <div class="copy"><?php the_sub_field('testimonial');?></div>
                 <!-- <div class="centre-line">
                     <div class="line"></div>

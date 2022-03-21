@@ -50,12 +50,14 @@
         flex: 1;
         padding: 0 3rem 2rem 3rem;
         text-align: center;
+        font-weight: 200;
       }
       .date {
         color: $color-primary;
         text-align: center;
         font-weight: 400;
         padding-top: 2rem;
+        letter-spacing: 2px;
       }
       .button {
         margin: 1rem 3rem;

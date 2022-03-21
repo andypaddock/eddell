@@ -307,8 +307,9 @@ article {
   a {
     color: $color-primary;
     text-decoration: none;
-    font-weight: 700;
+    font-size: 1.5rem;
     position: relative;
+    font-family: $default-font-heading;
     &::before {
       content: "\00B7";
       position: absolute;
@@ -786,13 +787,10 @@ img.mfp-img {
 .owl-prev {
   position: absolute;
   top: 200px;
-  left: 33px;
   border: solid transparent;
   content: " ";
   height: 0;
   width: 0;
-  left: 34px;
-  top: 200px;
   position: absolute;
   border-right-color: #b7852c;
   border-width: 18px;
@@ -801,15 +799,12 @@ img.mfp-img {
 .owl-next {
   position: absolute;
   top: 200px;
-  right: -20px;
-  top: 200px;
   border: solid transparent;
   height: 0;
   width: 0;
   position: absolute;
   /*   border-color: rgba(194, 225, 245, 0); */
   border-left-color: #b7852c;
-  right: 35px;
   border-width: 18px;
   margin-top: -16px;
 }
@@ -858,11 +853,21 @@ img.mfp-img {
 
 /*timeline slider styles*/
 .timeline-slide {
-  max-width: 165px;
+  max-width: 15rem;
   margin: 4.2rem 0 0 0;
   width: 100%;
   position: relative;
   text-align: center;
+  .property {
+    font-family: $default-font-heading;
+    color: $color-primary;
+    font-size: 1.75rem;
+  }
+  .meta {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
 }
 .timeline-slide .circle {
   background-color: $color-primary;
@@ -922,7 +927,7 @@ button:focus {
     border-bottom: dashed 1px $color-primary;
     position: absolute;
     left: 0;
-    top: 43.7%;
+    top: 41.7%;
     z-index: 1;
   }
   .owl-stage-outer {
@@ -934,5 +939,12 @@ button:focus {
   padding: 5rem 0;
   .desktop-carousel {
     padding: 10rem 0 5rem;
+  }
+  .owl-carousel .owl-nav button.owl-prev,
+  .owl-carousel .owl-nav button.owl-next {
+    top: 10rem;
+  }
+  .owl-carousel .owl-nav button.owl-prev {
+    left: -3rem;
   }
 }

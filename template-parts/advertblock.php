@@ -16,7 +16,7 @@
 
                     </div>
                     <div class="content-title no-mob">
-                        <h2 class="heading-tertiary alt-text"><?php the_sub_field('content_title');?></h2>
+                        <h2 class="heading-tertiary alt-text upper"><?php the_sub_field('content_title');?></h2>
                     </div>
                     <div class="rotate no-mob"><i class="fa-solid fa-reply fa-rotate-180"></i></div>
                 </div>

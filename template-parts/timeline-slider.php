@@ -26,7 +26,7 @@ if(get_sub_field('white_text'))
                     <div class="circle"></div>
                     <div class="timeline-copy">
                         <h3><?php the_sub_field('date'); ?></h3>
-                        <p><?php the_sub_field('property'); ?></p>
+                        <p class="property"><?php the_sub_field('property'); ?></p>
                         <p class="meta"><?php the_sub_field('county'); ?></p>
                     </div>
                 </div>

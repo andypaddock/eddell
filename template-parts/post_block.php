@@ -43,7 +43,7 @@ $counter++;
                 <span class="date">
                     <?php echo get_the_date( 'd/m/y' ); ?>
                 </span>
-                <h2 class="heading-tertiary alt-text"><?php the_title(  ); ?></h2>
+                <h2 class="heading-tertiary alt-text upper"><?php the_title(  ); ?></h2>
                 <div class="slash">&#183;</div>
                 <div class="post-excerpt">
                     <?php the_excerpt(  ); ?>

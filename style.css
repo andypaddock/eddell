@@ -16,7 +16,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 1em = 16px
 */
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@200;300;400;700&display=swap");
 @-webkit-keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -544,6 +544,7 @@ blockquote {
   font-size: 1.5rem;
   line-height: 1.8rem;
   font-weight: 200;
+  letter-spacing: 1.5px;
   margin: 1rem 0;
 }
 .button:hover:after {
@@ -570,7 +571,7 @@ blockquote {
           perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 52rem;
+  height: 42rem;
 }
 .card .rotate i {
   font-size: 3rem;
@@ -627,7 +628,6 @@ blockquote {
 }
 .card__picture {
   background-size: cover;
-  height: 12rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -639,7 +639,7 @@ blockquote {
   border-top-right-radius: 3px;
 }
 .card__picture i {
-  font-size: 6rem;
+  font-size: 4.5rem;
   color: #b0b297;
 }
 .card__picture img {
@@ -719,7 +719,8 @@ blockquote {
 }
 .card__cta .content-text p {
   font-size: 1.3rem;
-  font-weight: 300;
+  font-weight: 200;
+  line-height: 1.8rem;
 }
 .card__cta .content-title {
   text-align: center;
@@ -807,6 +808,10 @@ blockquote {
 .staff-block .card__title p {
   color: #b0b297;
   font-weight: 300;
+}
+
+.staff-block .card__side {
+  height: 45rem;
 }
 
 .composition {
@@ -1021,11 +1026,15 @@ blockquote {
 
 .section-advertblock {
   border-radius: 1rem;
-  margin: 5rem 2rem;
+  padding: 0;
+  margin-top: 5rem;
+}
+.section-advertblock ~ .section-advertblock {
+  margin-top: 0;
+  margin-bottom: 5rem;
 }
 .section-advertblock .advert-container {
   border-radius: 1rem;
-  padding: 0 0 5rem;
   text-align: center;
 }
 .section-advertblock .advert-container .heading-secondary {
@@ -1522,12 +1531,14 @@ blockquote {
           flex: 1;
   padding: 0 3rem 2rem 3rem;
   text-align: center;
+  font-weight: 200;
 }
 .post-block .post-grid .mix .date {
   color: #b0b297;
   text-align: center;
   font-weight: 400;
   padding-top: 2rem;
+  letter-spacing: 2px;
 }
 .post-block .post-grid .mix .button {
   margin: 1rem 3rem;
@@ -2001,9 +2012,11 @@ blockquote {
   -webkit-box-orient: vertical;
   overflow: hidden;
   margin: 2rem 0;
+  padding: 0 8rem;
 }
 .testimonial-slider .copy p {
-  font-size: 2rem;
+  font-size: 1.7rem;
+  color: #b0b297;
   letter-spacing: 0.1rem;
 }
 @media only screen and (max-width: 37.5em) {
@@ -2044,6 +2057,16 @@ blockquote {
   position: relative;
   opacity: 0;
   left: -12px;
+}
+.testimonial-slider .owl-prev,
+.testimonial-slider .owl-next {
+  top: 0;
+}
+.testimonial-slider .owl-prev {
+  left: 1rem;
+}
+.testimonial-slider .owl-next {
+  right: 1rem;
 }
 
 .testimonial-block .controls {
@@ -2917,7 +2940,7 @@ footer .w90 {
       -ms-flex-pack: end;
           justify-content: flex-end;
   overflow: hidden;
-  row-gap: 5vh;
+  row-gap: 20vh;
 }
 @media only screen and (max-width: 37.5em) {
   .header .hero {
@@ -2928,7 +2951,7 @@ footer .w90 {
 }
 .header .hero .heading-secondary {
   color: #fff;
-  font-size: 5rem;
+  font-size: 5.5rem;
   letter-spacing: 0.5rem;
 }
 @media only screen and (max-width: 37.5em) {
@@ -3428,7 +3451,8 @@ footer .w90 {
 .top-navbar .menu li a {
   color: #fff;
   font-weight: 200;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+  letter-spacing: 1.25px;
 }
 .top-navbar .menu li a::after {
   content: "";
@@ -3511,6 +3535,20 @@ footer .w90 {
   z-index: 99;
   -webkit-transition: all 1.5s ease 0s;
   transition: all 1.5s ease 0s;
+}
+.top-navbar .main-nav {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.top-navbar .logo {
+  -ms-flex-preferred-size: 25rem;
+      flex-basis: 25rem;
+}
+.top-navbar ul {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .scrolled .top-navbar {
@@ -4136,8 +4174,9 @@ article p {
 .read-less a {
   color: #b0b297;
   text-decoration: none;
-  font-weight: 700;
+  font-size: 1.5rem;
   position: relative;
+  font-family: "Didot", sans-serif;
 }
 .read-more a::before,
 .read-less a::before {
@@ -4619,13 +4658,10 @@ img.mfp-img {
 .owl-prev {
   position: absolute;
   top: 200px;
-  left: 33px;
   border: solid transparent;
   content: " ";
   height: 0;
   width: 0;
-  left: 34px;
-  top: 200px;
   position: absolute;
   border-right-color: #b7852c;
   border-width: 18px;
@@ -4635,15 +4671,12 @@ img.mfp-img {
 .owl-next {
   position: absolute;
   top: 200px;
-  right: -20px;
-  top: 200px;
   border: solid transparent;
   height: 0;
   width: 0;
   position: absolute;
   /*   border-color: rgba(194, 225, 245, 0); */
   border-left-color: #b7852c;
-  right: 35px;
   border-width: 18px;
   margin-top: -16px;
 }
@@ -4699,11 +4732,21 @@ img.mfp-img {
 
 /*timeline slider styles*/
 .timeline-slide {
-  max-width: 165px;
+  max-width: 15rem;
   margin: 4.2rem 0 0 0;
   width: 100%;
   position: relative;
   text-align: center;
+}
+.timeline-slide .property {
+  font-family: "Didot", sans-serif;
+  color: #b0b297;
+  font-size: 1.75rem;
+}
+.timeline-slide .meta {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: 400;
 }
 
 .timeline-slide .circle {
@@ -4772,7 +4815,7 @@ button:focus {
   border-bottom: dashed 1px #b0b297;
   position: absolute;
   left: 0;
-  top: 43.7%;
+  top: 41.7%;
   z-index: 1;
 }
 .slider-holder {
@@ -4781,4 +4824,11 @@ button:focus {
 }
 .slider-holder .desktop-carousel {
   padding: 10rem 0 5rem;
+}
+.slider-holder .owl-carousel .owl-nav button.owl-prev,
+.slider-holder .owl-carousel .owl-nav button.owl-next {
+  top: 10rem;
+}
+.slider-holder .owl-carousel .owl-nav button.owl-prev {
+  left: -3rem;
 }

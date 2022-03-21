@@ -64,7 +64,8 @@
       a {
         color: $color-white;
         font-weight: 200;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+        letter-spacing: 1.25px;
         &::after {
           content: "";
           display: block;
@@ -149,6 +150,15 @@
   top: 3rem;
   z-index: 99;
   transition: all 1.5s ease 0s;
+  .main-nav {
+    flex: 1;
+  }
+  .logo {
+    flex-basis: 25rem;
+  }
+  ul {
+    justify-content: space-between;
+  }
 }
 .scrolled .top-navbar {
   top: 1rem;

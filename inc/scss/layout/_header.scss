@@ -50,13 +50,13 @@
     flex-direction: column;
     justify-content: flex-end;
     overflow: hidden;
-    row-gap: 5vh;
+    row-gap: 20vh;
     @include respond(phone) {
       justify-content: center;
     }
     .heading-secondary {
       color: $color-white;
-      font-size: 5rem;
+      font-size: 5.5rem;
       letter-spacing: 0.5rem;
       @include respond(phone) {
         font-size: 3rem;

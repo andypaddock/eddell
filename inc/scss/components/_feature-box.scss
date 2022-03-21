@@ -119,10 +119,15 @@
 }
 .section-advertblock {
   border-radius: 1rem;
-  margin: 5rem 2rem;
+  padding: 0;
+  margin-top: 5rem;
+  & ~ .section-advertblock {
+    margin-top: 0;
+    margin-bottom: 5rem;
+  }
   .advert-container {
     border-radius: 1rem;
-    padding: 0 0 5rem;
+    // padding: 0 0 5rem;
     text-align: center;
     .heading-secondary {
       color: $color-white;
