@@ -91,6 +91,7 @@
   //   }
   // }
   .footer-hero {
+    min-height: 50vh;
     padding-top: 5rem;
     @include backgroundCover;
     display: flex;
@@ -137,6 +138,7 @@
         }
         p {
           font-size: 1.2rem;
+          width: 50%;
         }
         @include respond(phone) {
           .mc4wp-form-fields {
@@ -194,109 +196,111 @@
       }
     }
   }
-}
-.footer-navbar {
-  display: flex;
-  background: rgba($color-white, 0.4);
-  .nav {
-    padding: 3rem 0;
-    @include respond(phone) {
-      align-self: flex-start;
-    }
-    ul {
-      list-style: none;
-      column-count: 3;
-      li {
-        border-left: 1px solid $color-primary;
-        @include respond(phone) {
-          &:nth-of-type(4) a {
-            padding-top: 0;
+  .footer-navbar {
+    display: flex;
+    background: rgba($color-white, 0.4);
+    padding: 1rem 5rem;
+    .nav {
+      padding: 3rem 0;
+      @include respond(phone) {
+        align-self: flex-start;
+      }
+      ul {
+        list-style: none;
+        column-count: 3;
+        li {
+          border-left: 1px solid $color-primary;
+          @include respond(phone) {
+            &:nth-of-type(4) a {
+              padding-top: 0;
+            }
+          }
+
+          a {
+            color: $color-white;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 2rem;
+            font-size: 1.4rem;
           }
         }
-
-        a {
-          color: $color-white;
-          text-transform: uppercase;
-          text-decoration: none;
-          padding: 2rem;
-          font-size: 1.4rem;
+      }
+    }
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 0;
+      svg {
+        height: 6rem;
+        .cls-1 {
+          fill: $color-white;
         }
       }
     }
-  }
-  .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem 0;
-    svg {
-      height: 6rem;
-      .cls-1 {
-        fill: $color-white;
-      }
-    }
-  }
-  .footer-social {
-    flex-basis: 30%;
-    padding: 0 3rem;
-    i {
-      color: $color-white;
-      @include respond(phone) {
-        padding: 1rem 3rem;
-        font-size: 3rem;
-      }
-    }
-  }
-  .nav-area {
-    .menu {
-      li {
-        padding: 0 3rem;
+    .footer-social {
+      flex-basis: 15%;
+      padding: 0 2rem;
+      i {
+        color: $color-white;
         @include respond(phone) {
-          padding: 0 1rem;
-        }
-        a {
-          color: $color-white;
-          font-weight: 200;
-          text-transform: uppercase;
-          font-size: 1.4rem;
+          padding: 1rem 3rem;
+          font-size: 3rem;
         }
       }
     }
-  }
-  ul {
-    li {
-      padding-right: 2rem;
-    }
-  }
-  .privacy {
-    padding: 3rem 0;
-    @include respond(phone) {
-      align-self: flex-start;
+    .nav-area {
+      .menu {
+        li {
+          padding: 0 3rem;
+          @include respond(phone) {
+            padding: 0 1rem;
+          }
+          a {
+            color: $color-white;
+            font-weight: 200;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+          }
+        }
+      }
     }
     ul {
-      list-style: none;
       li {
-        border-left: 1px solid $color-primary;
-        a {
-          color: $color-white;
-          text-decoration: none;
-          padding: 2rem;
-        }
-        span {
-          padding: 2rem;
+        padding-right: 2rem;
+      }
+    }
+    .privacy {
+      padding: 3rem 0;
+      @include respond(phone) {
+        align-self: flex-start;
+      }
+      ul {
+        list-style: none;
+        li {
+          border-left: 1px solid $color-primary;
+          a {
+            color: $color-white;
+            text-decoration: none;
+            padding: 2rem;
+          }
+          span {
+            padding: 2rem;
+          }
         }
       }
     }
-  }
-  @include respond(tab-port) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .nav ul {
-      column-count: 2;
+    @include respond(tab-port) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .nav ul {
+        column-count: 2;
+      }
     }
   }
 }
+
 .footer-privacy {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -341,5 +345,8 @@
     }
   }
 }
-.footer-form {
+.form-holder {
+  div.wpforms-container-full {
+    margin-bottom: 0;
+  }
 }

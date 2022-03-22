@@ -23,12 +23,14 @@
                             <h3 class="heading-tertiary">
                                 <?php the_field('footer_main_text','options'); ?>
                             </h3>
-                            <?php
+                            <div class="form-holder">
+                                <?php
         if ( get_field('footer_shortcode','options') ) {
             echo do_shortcode( get_field('footer_shortcode','options') );
         }
-        ?>
+        ?></div>
                             <?php the_field('newsletter_text','options'); ?>
+
                         </div>
                     </div>
                 </div>
