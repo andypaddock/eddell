@@ -2017,7 +2017,7 @@ blockquote {
 }
 .testimonial-slider .copy {
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 10;
   -webkit-box-orient: vertical;
   overflow: hidden;
   margin: 2rem 0;
