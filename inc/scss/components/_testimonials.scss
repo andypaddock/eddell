@@ -26,7 +26,8 @@
       letter-spacing: 0.1rem;
     }
     @include respond(phone) {
-      -webkit-line-clamp: 10;
+      -webkit-line-clamp: 25;
+      padding: 0 2rem;
     }
   }
   .quote-cite {

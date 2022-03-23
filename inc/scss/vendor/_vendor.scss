@@ -775,15 +775,7 @@ img.mfp-img {
 }
 
 /*owl carousel styles*/
-.owl-carousel .owl-dots .owl-dot {
-  background: #fff;
-  border: solid;
-  border-width: 1px;
-  border-color: #bfbfbf;
-}
-.owl-carousel .owl-dots .owl-dot.active {
-  background: #417638;
-}
+
 .owl-prev {
   position: absolute;
   top: 200px;
@@ -853,7 +845,7 @@ img.mfp-img {
 
 /*timeline slider styles*/
 .timeline-slide {
-  max-width: 15rem;
+
   margin: 4.2rem 0 0 0;
   width: 100%;
   position: relative;
@@ -914,8 +906,7 @@ button:focus {
 
 @media screen and (max-width: 560px) {
   .timeline-slide {
-    margin-top: 4.2rem;
-    margin-left: 3.5rem;
+    
   }
 }
 .timeline-slider {
@@ -927,8 +918,11 @@ button:focus {
     border-bottom: dashed 1px $color-primary;
     position: absolute;
     left: 0;
-    top: 41.7%;
+    top: 45.7%;
     z-index: 1;
+    @include respond(phone) {
+      top: 44.8%;
+    }
   }
   .owl-stage-outer {
   }

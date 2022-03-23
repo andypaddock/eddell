@@ -44,7 +44,7 @@
                 <div class="bar bottom"></div>
             </div>
         </div>
-        <div class="row top-navbar">
+        <div class="top-navbar">
             <?php $logoSwitch = get_field('logo_color','options');
          if ($logoSwitch == 'light'): ?>
             <div class="logo"><a href="<?php echo site_url(); ?>"><?php get_template_part("inc/img/eddelllogo"); ?></a>

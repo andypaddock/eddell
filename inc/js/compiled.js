@@ -5872,6 +5872,20 @@ $(".testimonial-carousel").owlCarousel({
   autoplay:true,
     autoplayTimeout:6000,
     autoplayHoverPause:true,
+    responsive:{
+      0:{
+        nav:false,
+        dots:true,
+      },
+      550: {
+        nav:false,
+        dots:true,
+      },
+      900: {
+        nav:true,
+        dots:false,
+      },
+    }
 });
 
 $(".fadeOut").owlCarousel({
@@ -5903,7 +5917,7 @@ $(".fadeOut").owlCarousel({
 
 new Readmore('article', {
   speed: 150,
-  collapsedHeight: 105,
+  collapsedHeight: 190,
 });
 
 
@@ -6103,15 +6117,16 @@ $('.timeline').owlCarousel({
   pagination: true,
   paginationNumbers: false,
   nav:true,
-  center:false,
   dots:false,
   margin:10,
   responsive:{
     0:{
-      items:1
+      items:1,
+      nav:false,
     },
     550: {
-      items:2
+      items:2,
+      nav:false,
     },
     900:{
       items:3
@@ -6147,11 +6162,11 @@ $('.desktop-owl').owlCarousel({
   loop: true,
   pagination: true,
   paginationNumbers: false,
-  nav:true,
-  center: false,
   responsive:{
     0:{
-      items:1
+      items:1,
+      nav:false,
+      dots:true,
     }
   }
 });

@@ -45,6 +45,9 @@
       border: none;
       text-transform: uppercase;
       padding: 1rem 2rem;
+      @include respond(phone) {
+        width: 100%;
+      }
     }
     .footer-form p {
       margin: 0 0 28px;
@@ -116,6 +119,10 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 2rem;
+      @include respond(phone) {
+        display: flex;
+        flex-direction: column;
+      }
     }
   }
 }

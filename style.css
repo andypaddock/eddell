@@ -614,7 +614,7 @@ blockquote {
 }
 .card__side--back {
   padding: 4rem 2rem;
-  background: #161208;
+  background: #fff;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
@@ -721,6 +721,7 @@ blockquote {
   font-size: 1.3rem;
   font-weight: 200;
   line-height: 1.8rem;
+  color: #00212a;
 }
 .card__cta .content-title {
   text-align: center;
@@ -760,8 +761,6 @@ blockquote {
   .card__side--back {
     -webkit-transform: rotateY(0);
             transform: rotateY(0);
-    -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
-            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
   }
   .card:hover .card__side--front {
     -webkit-transform: rotateY(0);
@@ -1234,6 +1233,11 @@ blockquote {
   text-transform: uppercase;
   padding: 1rem 2rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .footer-text-container .footer-contact div.wpforms-container-full .wpforms-form button[type=submit] {
+    width: 100%;
+  }
+}
 .footer-text-container .footer-contact .footer-form p {
   margin: 0 0 28px;
 }
@@ -1303,6 +1307,17 @@ blockquote {
   -ms-grid-columns: 1fr 2rem 1fr;
   grid-template-columns: 1fr 1fr;
   grid-gap: 2rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .footer-text-container .footer-contact .wpforms-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .popup {
@@ -2030,7 +2045,8 @@ blockquote {
 }
 @media only screen and (max-width: 37.5em) {
   .testimonial-slider .copy {
-    -webkit-line-clamp: 10;
+    -webkit-line-clamp: 25;
+    padding: 0 2rem;
   }
 }
 .testimonial-slider .quote-cite {
@@ -2937,7 +2953,6 @@ footer .w90 {
 .header .hero {
   height: 100%;
   position: relative;
-  border-radius: 0.5rem 0.5rem 0 0;
   background-size: cover !important;
   /* !important added as result of rule not working inside display:grid */
   background-position: center center !important;
@@ -4659,17 +4674,6 @@ img.mfp-img {
   }
 }
 /*owl carousel styles*/
-.owl-carousel .owl-dots .owl-dot {
-  background: #fff;
-  border: solid;
-  border-width: 1px;
-  border-color: #bfbfbf;
-}
-
-.owl-carousel .owl-dots .owl-dot.active {
-  background: #417638;
-}
-
 .owl-prev {
   position: absolute;
   top: 200px;
@@ -4747,7 +4751,6 @@ img.mfp-img {
 
 /*timeline slider styles*/
 .timeline-slide {
-  max-width: 15rem;
   margin: 4.2rem 0 0 0;
   width: 100%;
   position: relative;
@@ -4811,12 +4814,6 @@ button:focus {
   outline: 0;
 }
 
-@media screen and (max-width: 560px) {
-  .timeline-slide {
-    margin-top: 4.2rem;
-    margin-left: 3.5rem;
-  }
-}
 .timeline-slider {
   background-size: cover !important;
   /* !important added as result of rule not working inside display:grid */
@@ -4830,8 +4827,13 @@ button:focus {
   border-bottom: dashed 1px #b0b297;
   position: absolute;
   left: 0;
-  top: 41.7%;
+  top: 45.7%;
   z-index: 1;
+}
+@media only screen and (max-width: 37.5em) {
+  .timeline-slider:after {
+    top: 44.8%;
+  }
 }
 .slider-holder {
   text-align: center;
