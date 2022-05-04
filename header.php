@@ -44,6 +44,7 @@
                 <div class="bar bottom"></div>
             </div>
         </div>
+        <header class="header">
         <div class="top-navbar">
             <?php $logoSwitch = get_field('logo_color','options');
          if ($logoSwitch == 'light'): ?>
@@ -62,7 +63,7 @@
             </nav>
         </div>
 
-        <header class="header <?php the_field('hero_section_size'); ?>">
+        
 
             <?php if (is_single()):?>
             <?php get_template_part('template-parts/posthero');?>

@@ -2,17 +2,17 @@
 body {
   font-family: $default-font-family;
   line-height: 1.7;
-  color: $color-white;
+  color: $color-black;
   font-weight: 300;
 }
 
 .heading-primary {
-  color: $color-white;
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 6rem;
   font-size: 5rem;
   font-family: $default-font-heading;
+  line-height: 1.4;
   &--main {
     display: block;
 
@@ -52,7 +52,6 @@ body {
   text-transform: uppercase;
   font-weight: 200;
   display: inline-block;
-  color: $color-white;
   letter-spacing: 0.2rem;
   transition: all 0.2s;
   line-height: 1.1;

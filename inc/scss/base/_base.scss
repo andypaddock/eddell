@@ -46,6 +46,7 @@ main {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  scroll-snap-type: y mandatory;
 }
 #content {
   flex: 1;
@@ -59,4 +60,7 @@ a {
   @include respond(tab-land) {
     display: none;
   }
+}
+.alt-bg {
+  background-color: $color-light-bg;
 }

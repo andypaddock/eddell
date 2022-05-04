@@ -11,7 +11,7 @@
   // }
 
   @include respond(tab-port) {
-    padding: 0 3rem;
+    // padding: 0 3rem;
   }
 
   @include clearfix;
@@ -31,6 +31,9 @@
     @include respond(tab-port) {
       width: 100% !important;
     }
+  }
+  &-extended {
+    max-width: unset;
   }
 
   .col-1-of-2 {

@@ -52,6 +52,10 @@ get_header(); ?>
 <?php get_template_part('template-parts/timeline-slider');?>
 <?php elseif( get_row_layout() == 'staff_block' ):?>
 <?php get_template_part('template-parts/staffblock');?>
+<?php elseif( get_row_layout() == 'double_image' ):?>
+<?php get_template_part('template-parts/double_image');?>
+<?php elseif( get_row_layout() == 'text_image_scroll' ):?>
+<?php get_template_part('template-parts/text_image_scroll');?>
 <?php endif; ?>
 <?php endwhile; ?>
 <?php endif; ?>

@@ -231,3 +231,32 @@
     }
   }
 }
+.text-image-scroll {
+  padding: 0;
+  scroll-snap-align: start;
+
+}
+.image-scroll-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+height: 50vh;
+overflow: scroll;
+&::-webkit-scrollbar {
+  display: none;
+}
+  > div {
+
+  }
+  .image-container {
+    @include backgroundCover;
+    height: 50vh;
+    position: sticky;
+    top: 0;
+    img {
+      width: 100%;
+    }
+  }
+  .scroll-text {
+    padding: 3rem 15%;
+  }
+}

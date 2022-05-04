@@ -6,6 +6,7 @@
   padding: 2rem 5rem;
   width: 100%;
   justify-content: space-between;
+  overflow-x: hidden;
 }
 
 .top-navbar,
@@ -32,7 +33,7 @@
   transform: scaleX(1.05);
 }
 .top-navbar {
-  background: $color-primary-bg;
+  background: $color-white;
   .logo {
     svg {
       height: 3rem;
@@ -62,7 +63,7 @@
       padding: 0 3rem;
       text-transform: uppercase;
       a {
-        color: $color-white;
+        color: $color-black;
         font-weight: 200;
         font-size: 1.2rem;
         letter-spacing: 1.25px;
@@ -146,8 +147,7 @@
 }
 
 .top-navbar {
-  position: sticky;
-  top: 3rem;
+ 
   z-index: 99;
   transition: all 1.5s ease 0s;
   .main-nav {
@@ -155,9 +155,14 @@
   }
   .logo {
     flex-basis: 25rem;
+    svg {
+      path {
+        fill: $color-black;
+      }
+    }
   }
   ul {
-    justify-content: space-between;
+    justify-content: end;
   }
 }
 .scrolled .top-navbar {
