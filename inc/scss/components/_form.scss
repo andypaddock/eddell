@@ -32,7 +32,8 @@
       padding: 12px 16px;
       border-radius: 0;
       border: 0;
-      background: rgba(255, 255, 255, 0.4);
+      background: rgba(255, 255, 255, 0);
+      border: 1px solid $color-white;
       font-family: $default-font-family;
     }
     .footer-form ::-webkit-input-placeholder {
@@ -100,8 +101,9 @@
       padding: 2rem 0;
       input {
         color: white;
-        background: rgba(255, 255, 255, 0.4);
+        background: rgba(255, 255, 255, 0);
         padding: 1rem 3rem;
+        border: 1px solid $color-white;
         border-radius: 0.5rem;
         border: none;
         margin-right: 0.5rem;
@@ -117,7 +119,6 @@
     }
     .wpforms-form {
       display: grid;
-      grid-template-columns: 1fr 1fr;
       grid-gap: 2rem;
       @include respond(phone) {
         display: flex;

@@ -389,9 +389,8 @@ body {
 }
 .heading-secondary--sub {
   display: block;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-weight: 300;
-  letter-spacing: 0.5rem;
   -webkit-animation: moveInRight 1s ease-out;
           animation: moveInRight 1s ease-out;
   font-family: "Lato", sans-serif;
@@ -439,7 +438,7 @@ ul {
 .paragraph:not(:last-child),
 p:not(:last-child),
 ul:not(:last-child) {
-  margin-bottom: 3rem;
+  margin-bottom: 6rem;
 }
 
 blockquote {
@@ -1307,7 +1306,7 @@ blockquote {
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 30vh;
+  height: 45rem;
 }
 
 .contact-links {
@@ -1350,7 +1349,8 @@ blockquote {
   padding: 12px 16px;
   border-radius: 0;
   border: 0;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0);
+  border: 1px solid #fff;
   font-family: "Lato", sans-serif;
 }
 .footer-text-container .footer-contact .footer-form ::-webkit-input-placeholder {
@@ -1418,8 +1418,9 @@ blockquote {
 }
 .footer-text-container .footer-contact .mc4wp-form-fields input {
   color: white;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0);
   padding: 1rem 3rem;
+  border: 1px solid #fff;
   border-radius: 0.5rem;
   border: none;
   margin-right: 0.5rem;
@@ -1435,8 +1436,6 @@ blockquote {
 .footer-text-container .footer-contact .wpforms-form {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 2rem 1fr;
-  grid-template-columns: 1fr 1fr;
   grid-gap: 2rem;
 }
 @media only screen and (max-width: 37.5em) {
@@ -1642,9 +1641,9 @@ blockquote {
 .post-block .post-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 2rem 1fr;
+  -ms-grid-columns: 1fr 6rem 1fr;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 2rem;
+  grid-gap: 6rem;
 }
 @media only screen and (max-width: 56.25em) {
   .post-block .post-grid {
@@ -1682,9 +1681,10 @@ blockquote {
   position: absolute;
 }
 .post-block .post-grid .mix .heading-tertiary {
-  padding: 0 3rem;
-  font-weight: 200;
+  padding: 0 3rem 3rem;
+  font-weight: 700;
   text-align: center;
+  font-size: 1.8rem;
 }
 .post-block .post-grid .mix .post-excerpt {
   -webkit-box-flex: 1;
@@ -1695,11 +1695,11 @@ blockquote {
   font-weight: 200;
 }
 .post-block .post-grid .mix .date {
-  color: #b0b297;
   text-align: center;
   font-weight: 400;
   padding-top: 2rem;
   letter-spacing: 2px;
+  font-size: 1.4rem;
 }
 .post-block video {
   width: 100%;
@@ -1951,7 +1951,7 @@ blockquote {
 
 .section-title {
   text-align: center;
-  padding: 5rem 0;
+  padding: 10rem 0 5rem;
 }
 .section-title .alt-text {
   color: #fff;
@@ -2602,7 +2602,7 @@ blockquote {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  padding: 5rem 0;
+  padding: 10rem 0;
 }
 @media only screen and (max-width: 37.5em) {
   .double-image .image-container {
@@ -2628,7 +2628,7 @@ blockquote {
           justify-content: center;
 }
 .double-image .image-container .left-image img, .double-image .image-container .right-image img {
-  max-height: 12rem;
+  max-height: 15rem;
 }
 .double-image .image-container .left-image {
   border-right: 1px solid #86837D;
@@ -2710,7 +2710,7 @@ blockquote {
   }
 }
 .footer .footer-hero {
-  min-height: 50vh;
+  height: calc(100vh - 70px);
   padding-top: 5rem;
   background-size: cover !important;
   /* !important added as result of rule not working inside display:grid */
@@ -2781,8 +2781,13 @@ blockquote {
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
-.footer .footer-hero .footer-contact .footer-newsletter .heading-tertiary {
-  font-weight: 200;
+.footer .footer-hero .footer-contact .footer-newsletter .heading-primary {
+  margin-bottom: 0rem;
+}
+.footer .footer-hero .footer-contact .footer-newsletter .slash {
+  color: #fff;
+  text-align: left;
+  padding-bottom: 5rem;
 }
 .footer .footer-hero .footer-contact .footer-newsletter p {
   font-size: 1.2rem;
@@ -2831,11 +2836,7 @@ blockquote {
   margin-left: 5rem;
 }
 .footer .footer-navbar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background: rgba(255, 255, 255, 0.4);
-  padding: 1rem 5rem;
+  padding: 6rem 0;
 }
 .footer .footer-navbar .nav {
   padding: 3rem 0;
@@ -3201,10 +3202,13 @@ footer .w90 {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding: 3rem 15%;
+  padding: 6rem 15%;
 }
 .header .hero .hero-text .hero-text-box {
   padding-bottom: 5rem;
+}
+.header .hero .hero-text .down_arrow {
+  padding-top: 40%;
 }
 .header__quote-box {
   text-align: center;
@@ -3666,7 +3670,6 @@ footer .w90 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 2rem 5rem;
   width: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -3741,8 +3744,8 @@ footer .w90 {
 }
 .top-navbar .menu li a {
   color: #141006;
-  font-weight: 200;
-  font-size: 1.2rem;
+  font-weight: 400;
+  font-size: 1.4rem;
   letter-spacing: 1.25px;
 }
 .top-navbar .menu li a::after {
@@ -3821,6 +3824,7 @@ footer .w90 {
 }
 
 .top-navbar {
+  padding: 2rem 7.5%;
   z-index: 99;
   -webkit-transition: all 1.5s ease 0s;
   transition: all 1.5s ease 0s;

@@ -14,15 +14,15 @@
 
                 <div class="row">
                     <div class="footer-contact">
-                        <div class="logo"><a
-                                href="<?php echo site_url(); ?>"><?php get_template_part("inc/img/eddelllogo"); ?></a>
+                        <div class="logo">
                             <div class="contact-block"><?php the_field('contact_block','options'); ?></div>
                         </div>
                         <div class="footer-newsletter">
 
-                            <h3 class="heading-tertiary">
+                            <h2 class="heading-primary">
                                 <?php the_field('footer_main_text','options'); ?>
-                            </h3>
+                            </h2>
+                            <div class="slash">&#183;</div>
                             <div class="form-holder">
                                 <?php
         if ( get_field('footer_shortcode','options') ) {
@@ -38,26 +38,6 @@
             <div class="footer-link-container">
                 <div class="row">
                     <div class="footer-navbar">
-                        <div class="footer-social">
-                            <?php if( have_rows('social_media_links','options') ): ?>
-                            <ul class="icons">
-                                <?php while( have_rows('social_media_links','options') ): the_row();?>
-                                <li>
-                                    <?php 
-$link = get_sub_field('link','options');
-if( $link ): 
-    $link_url = $link['url'];
-    $link_title = $link['title'];
-    $link_target = $link['target'] ? $link['target'] : '_self';
-    ?>
-                                    <a href="<?php echo esc_url( $link_url ); ?>"
-                                        target="<?php echo esc_attr( $link_target ); ?>"><?php the_sub_field('font_awesome_icon','options'); ?></a>
-                                    <?php endif; ?>
-                                </li>
-                                <?php endwhile; ?>
-                            </ul>
-                            <?php endif; ?>
-                        </div>
                         <div class="nav-area">
                             <menu>
                                 <?wp_nav_menu( array( 
@@ -73,14 +53,15 @@ if( $link ):
                     <div class="copyright"><?php the_field('copy_text','options'); ?></div>
                     <div class="silverless">
 
-                        <a href="https://silverless.co.uk">
-
-                            <?php get_template_part('inc/img/silverless', 'logo');?>
-
-                        </a>
+                    <a
+                                href="<?php echo site_url(); ?>"><?php get_template_part("inc/img/eddelllogo"); ?></a>
 
                     </div>
-                    <div class="filler"></div>
+                    <div class="silverless"><a href="https://silverless.co.uk">
+
+<?php get_template_part('inc/img/silverless', 'logo');?>
+
+</a></div>
                 </div>
             </div>
         </div>

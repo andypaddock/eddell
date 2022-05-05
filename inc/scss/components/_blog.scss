@@ -27,7 +27,7 @@
   .post-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2rem;
+    grid-gap: 6rem;
     @include respond(tab-port) {
       grid-template-columns: 1fr;
     }
@@ -46,9 +46,10 @@
         position: absolute;
       }
       .heading-tertiary {
-        padding: 0 3rem;
-        font-weight: 200;
+        padding: 0 3rem 3rem;
+        font-weight: 700;
         text-align: center;
+        font-size: 1.8rem;
       }
       .post-excerpt {
         flex: 1;
@@ -57,11 +58,11 @@
         font-weight: 200;
       }
       .date {
-        color: $color-primary;
         text-align: center;
         font-weight: 400;
         padding-top: 2rem;
         letter-spacing: 2px;
+        font-size: 1.4rem;
       }
     }
   }

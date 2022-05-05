@@ -3,7 +3,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem 5rem;
   width: 100%;
   justify-content: space-between;
   overflow-x: hidden;
@@ -66,8 +65,8 @@
       text-transform: uppercase;
       a {
         color: $color-black;
-        font-weight: 200;
-        font-size: 1.2rem;
+        font-weight: 400;
+        font-size: 1.4rem;
         letter-spacing: 1.25px;
         &::after {
           content: "";
@@ -149,7 +148,7 @@
 }
 
 .top-navbar {
- 
+ padding: 2rem 7.5%;
   z-index: 99;
   transition: all 1.5s ease 0s;
   .main-nav {

@@ -54,6 +54,7 @@ $(".testimonial-carousel").owlCarousel({
   margin:48,
   center:true,
   nav:true,
+  navText: ["<i class='fa-solid fa-chevron-left fa-3x'></i>","<i class='fa-solid fa-chevron-right fa-3x'></i>"],
   dots:false,
   items:1,
   autoplay:true,

@@ -17,9 +17,12 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      padding: 3rem 15%;
+      padding: 6rem 15%;
       .hero-text-box {
         padding-bottom: 5rem;
+      }
+      .down_arrow {
+        padding-top: 40%;
       }
     }
   }
