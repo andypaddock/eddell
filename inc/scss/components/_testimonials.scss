@@ -1,6 +1,8 @@
 .testimonial-slider {
   text-align: center;
+  padding: 10rem 0 5rem;
   .quote {
+    padding: 0 20%;
     .centre-line {
       display: flex;
       div {
@@ -31,7 +33,6 @@
     }
   }
   .quote-cite {
-    color: $color-primary;
     text-transform: uppercase;
     font-weight: 700;
   }
@@ -67,7 +68,7 @@
   }
   .owl-prev,
   .owl-next {
-    top: 0;
+    top: 25%;
   }
   .owl-prev {
     left: 1rem;
@@ -205,5 +206,29 @@
       text-align: center;
       margin: 0;
     }
+  }
+}
+.test-with-image {
+
+  .testimonial-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 15%;
+    .heading-primary {
+      margin-bottom: 0;
+    }
+    img {
+      max-height: 3rem;
+      object-fit: contain
+    }
+    .down_arrow {
+      padding-top: 25%
+    }
+  }
+  .testimonial-image {
+    @include backgroundCover;
+    height: calc(100vh - 70px) ;
   }
 }

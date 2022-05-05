@@ -269,33 +269,33 @@ ScrollReveal().reveal('video', {
 });
 
 
-$(document).ready(function() {
+// $(document).ready(function() {
 
-  var Mwidth = 960; // mobile devices
-  if ($(window).width() > Mwidth) {
-      var headerHeight = $('.top-navbar').height();
-      $(window).on('scroll', {
-              TopPrev: 0
-          },
-          function() {
-              var TopCurrent = $(window).scrollTop();
-              //check if user is scroll up
-              if (TopCurrent < this.TopPrev) {
-                  //if scroll up
-                  if (TopCurrent > 0 && $('.top-navbar').hasClass('fixed-menu')) {
-                      $('.top-navbar').addClass('visible-scroll-up');
-                  } else {
-                      $('.top-navbar').removeClass('visible-scroll-up fixed-menu');
-                  }
-              } else {
-                  //if scroll down
-                  $('.top-navbar').removeClass('visible-scroll-up');
-                  if (TopCurrent > headerHeight && !$('.top-navbar').hasClass('fixed-menu')) $('.top-navbar').addClass('fixed-menu');
-              }
-              this.TopPrev = TopCurrent;
-          });
-  }
-});
+//   var Mwidth = 960; // mobile devices
+//   if ($(window).width() > Mwidth) {
+//       var headerHeight = $('.top-navbar').height();
+//       $(window).on('scroll', {
+//               TopPrev: 0
+//           },
+//           function() {
+//               var TopCurrent = $(window).scrollTop();
+//               //check if user is scroll up
+//               if (TopCurrent < this.TopPrev) {
+//                   //if scroll up
+//                   if (TopCurrent > 0 && $('.top-navbar').hasClass('fixed-menu')) {
+//                       $('.top-navbar').addClass('visible-scroll-up');
+//                   } else {
+//                       $('.top-navbar').removeClass('visible-scroll-up fixed-menu');
+//                   }
+//               } else {
+//                   //if scroll down
+//                   $('.top-navbar').removeClass('visible-scroll-up');
+//                   if (TopCurrent > headerHeight && !$('.top-navbar').hasClass('fixed-menu')) $('.top-navbar').addClass('fixed-menu');
+//               }
+//               this.TopPrev = TopCurrent;
+//           });
+//   }
+// });
 
 
 /*** Timeline Carousel ***/

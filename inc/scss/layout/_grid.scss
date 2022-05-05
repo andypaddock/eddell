@@ -11,7 +11,7 @@
   // }
 
   @include respond(tab-port) {
-    // padding: 0 3rem;
+    padding: 0 3rem;
   }
 
   @include clearfix;
@@ -34,6 +34,13 @@
   }
   &-extended {
     max-width: unset;
+    @include respond(tab-port) {
+      padding: 0;
+    }
+  }
+  .split-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
   .col-1-of-2 {
@@ -87,7 +94,7 @@
   }
 }
 section {
-  padding: 5rem 0;
+  // padding: 5rem 0;
   // background: $color-primary-bg;
   // &:first-of-type {
   //   padding-top: 0;

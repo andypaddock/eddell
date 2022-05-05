@@ -34,6 +34,8 @@
 }
 .top-navbar {
   background: $color-white;
+  position: sticky;
+  top: 0;
   .logo {
     svg {
       height: 3rem;
@@ -166,7 +168,7 @@
   }
 }
 .scrolled .top-navbar {
-  top: 1rem;
+  // top: 1rem;
 }
 .top-navbar.visible-scroll-up {
   transform: translate3d(0px, 100%, 0px);

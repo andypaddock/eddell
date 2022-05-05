@@ -234,22 +234,28 @@
 .text-image-scroll {
   padding: 0;
   scroll-snap-align: start;
-
+  
 }
 .image-scroll-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-height: 50vh;
+  height: calc(100vh - 70px) ;
+  overflow: scroll;
+  
 overflow: scroll;
 &::-webkit-scrollbar {
   display: none;
 }
-  > div {
+@include respond(phone) {
+  display: flex;
+  flex-direction: column;
+  height: unset;
 
-  }
+}
+ 
   .image-container {
     @include backgroundCover;
-    height: 50vh;
+    height: calc(100vh - 70px) ;
     position: sticky;
     top: 0;
     img {
@@ -257,6 +263,26 @@ overflow: scroll;
     }
   }
   .scroll-text {
-    padding: 3rem 15%;
+    padding: 15%;
+    .heading-secondary {
+      position: relative;
+    }
+    .slash {
+      text-align: left;
+      padding: 3rem 0;
+    }
+    h3 {
+      text-transform: uppercase;
+      font-family: $default-font-heading;
+      padding-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+  }
+}
+.scroll-image {
+  padding-bottom: 0;
+  .single-image {
+    @include backgroundPara;
+    height: 30vh;
   }
 }

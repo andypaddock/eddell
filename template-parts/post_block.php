@@ -1,29 +1,23 @@
-<section class="post-block" id="post-section">
+<?php $bgColor = get_sub_field('bg_colour');
+$noMobile = get_sub_field('hide_on_mobile');?>
 
-    <div class="row">
-        <?php if(get_sub_field('show_filters')):?>
-        <div class="controls">
-            <ul>
-                <?php $all_categories = get_categories(array(
-        'hide_empty' => true
-    ));?>
-                <li>Filter</li>
-                <li type="button" data-filter="all">All</li>
-                <?php foreach($all_categories as $category): ?>
-                <li type="button" data-filter=".<?php echo $category->slug; ?>">
-                    <?php echo $category->name; ?></li>
-                <?php endforeach; ?>
-            </ul>
-        </div>
-        <?php endif; ?>
-
-
-        <div class="post-grid filter-grid">
+<section
+    class="post-block <?php if($bgColor == true): echo 'alt-bg'; endif; ?> <?php the_sub_field('margin_size'); ?> <?php if($noMobile == true): echo 'no-mob'; endif; ?>"
+    <?php if( get_sub_field('section_id') ): ?>id="<?php the_sub_field('section_id'); ?>" <?php endif; ?>>
+    <div class="row <?php the_sub_field('column_size'); ?>">
+    <?php 
+$postImage = get_sub_field('post_image'); ?>
+        <div class="split-col">
+        <div class="post-image" style="background-image: url(<?php echo $postImage['url']; ?>)"></div>
+        <div class="post-items">
+        <h2 class="heading-primary">
+            <span class="heading-primary"><?php the_sub_field('post_title'); ?></span>
+        </h2>
+        <div class="post-grid">
             <?php
-            $postNumber = get_sub_field('number_post');
 $loop = new WP_Query(
     array(
-        'posts_per_page' => $postNumber,
+        'posts_per_page' => -1,
         'post__not_in' => array( $post->ID )
     )
 );
@@ -44,17 +38,13 @@ $counter++;
                     <?php echo get_the_date( 'd/m/y' ); ?>
                 </span>
                 <h2 class="heading-tertiary alt-text upper"><?php the_title(  ); ?></h2>
-                <div class="slash">&#183;</div>
-                <div class="post-excerpt">
-                    <?php the_excerpt(  ); ?>
-                </div>
                 <a class="button" href="<?php echo get_permalink( $post->ID ); ?>">Read More</a>
             </div>
             <?php endwhile;
 wp_reset_postdata();
-?>
+?></div>
         </div>
-
+        </div>
     </div>
 
 </section>

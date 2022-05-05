@@ -11,18 +11,22 @@ body {
   backface-visibility: hidden;
   margin-bottom: 6rem;
   font-size: 5rem;
+  font-weight: 300;
   font-family: $default-font-heading;
   line-height: 1.4;
   &--main {
     display: block;
-
     font-weight: 300;
     letter-spacing: 0.2rem;
-
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out;
-
+    &::before {
+      content: open-quote;
+    }
+    &::after {
+      content: close-quote;
+    }
     @include respond(phone) {
       letter-spacing: 1rem;
       font-size: 2.5rem;
@@ -49,23 +53,26 @@ body {
 
 .heading-secondary {
   font-size: 3.5rem;
-  text-transform: uppercase;
+  
   font-weight: 200;
   display: inline-block;
   letter-spacing: 0.2rem;
   transition: all 0.2s;
-  line-height: 1.1;
+  line-height: 1.5;
   font-family: $default-font-heading;
   &.alt-text {
     color: $color-white;
   }
+  &--main {
+    text-transform: uppercase;
+  }
   &--sub {
     display: block;
-    font-size: 1.2rem;
-    font-weight: 400;
+    font-size: 1.5rem;
+    font-weight: 300;
     letter-spacing: 0.5rem;
     animation: moveInRight 1s ease-out;
-
+    font-family: $default-font-family;
     @include respond(phone) {
       letter-spacing: 0.5rem;
       padding: 0 1rem;
@@ -117,7 +124,7 @@ blockquote {
 }
 
 .slash {
-  color: $color-primary;
+  color: $color-black;
   font-size: 1.75rem;
   font-size: 5rem;
   font-weight: 400;

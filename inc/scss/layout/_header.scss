@@ -1,14 +1,17 @@
 .header {
-    height: 100vh;
+  height: calc(100vh - 70px) ;
     display: flex;
     flex-direction: column;
+    @include respond(phone) {
+      height: calc(100vh - 70px) ;
+    }
   .hero {
     display:grid;
     grid-template-columns: 1fr 1fr;
     flex: 1;
     @include respond(phone) {
       display: flex;
-      flex-direction: column;
+      flex-direction: column-reverse;
     }
     .hero-text {
       display: flex;

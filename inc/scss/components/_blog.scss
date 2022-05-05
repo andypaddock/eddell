@@ -1,4 +1,9 @@
 .post-block {
+  height: calc(100vh - 70px) ;
+  overflow: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
   .controls {
     padding: 5rem 0;
     ul {
@@ -21,7 +26,7 @@
   }
   .post-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 2rem;
     @include respond(tab-port) {
       grid-template-columns: 1fr;
@@ -35,7 +40,6 @@
         justify-content: center;
         height: 25rem;
         @include backgroundCover;
-        border-radius: 1rem 1rem 0 0;
         text-align: center;
       }
       svg {
@@ -58,9 +62,6 @@
         font-weight: 400;
         padding-top: 2rem;
         letter-spacing: 2px;
-      }
-      .button {
-        margin: 1rem 3rem;
       }
     }
   }
@@ -85,4 +86,15 @@
       font-size: 2rem;
     }
   }
+}
+
+.post-image {
+  @include backgroundCover;
+  height: calc(100vh - 70px) ;
+  position: sticky;
+  top: 0;
+}
+.post-items {
+  padding: 15%;
+  overflow: hidden;
 }
