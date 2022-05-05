@@ -229,6 +229,6 @@
   }
   .testimonial-image {
     @include backgroundCover;
-    height: calc(100vh - 70px) ;
+    min-height: calc(100vh - 70px) ;
   }
 }

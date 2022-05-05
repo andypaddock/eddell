@@ -2421,7 +2421,7 @@ blockquote {
   /* !important added as result of rule not working inside display:grid */
   background-position: center center !important;
   background-repeat: no-repeat !important;
-  height: calc(100vh - 70px);
+  min-height: calc(100vh - 70px);
 }
 
 .parent {
@@ -3157,7 +3157,7 @@ footer .w90 {
 }
 
 .header {
-  height: calc(100vh - 70px);
+  min-height: calc(100vh - 70px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

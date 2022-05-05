@@ -1,5 +1,5 @@
 .header {
-  height: calc(100vh - 70px) ;
+  min-height: calc(100vh - 70px) ;
     display: flex;
     flex-direction: column;
     @include respond(phone) {
