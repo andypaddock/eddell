@@ -451,6 +451,39 @@ blockquote {
   text-transform: uppercase;
 }
 
+.chevron::before {
+  border-style: solid;
+  border-width: 0.25em 0.25em 0 0;
+  content: "";
+  display: inline-block;
+  height: 1.5rem;
+  left: 0.15em;
+  position: relative;
+  top: 0.15em;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  vertical-align: top;
+  width: 1.5rem;
+}
+
+.chevron.right:before {
+  left: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.chevron.bottom:before {
+  top: 0;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.chevron.left:before {
+  left: 0.25em;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
 .u-center-text {
   text-align: center !important;
 }
@@ -2196,7 +2229,7 @@ blockquote {
 
 .testimonial-slider {
   text-align: center;
-  padding: 10rem 0 5rem;
+  padding: 15rem 0 5rem;
 }
 .testimonial-slider .quote {
   padding: 0 20%;
@@ -2215,6 +2248,9 @@ blockquote {
   border-right: 1px solid #fff;
   height: 2rem;
   margin: 2rem 0;
+}
+.testimonial-slider .heading-primary--main::before {
+  position: unset;
 }
 .testimonial-slider .copy {
   display: -webkit-box;
@@ -3268,7 +3304,7 @@ footer .w90 {
   margin-bottom: 3rem;
 }
 .header .hero .hero-text .down_arrow {
-  padding-top: 40%;
+  padding-top: 20%;
 }
 .header__quote-box {
   text-align: center;

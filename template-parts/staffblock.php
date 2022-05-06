@@ -40,7 +40,7 @@ $noMobile = get_sub_field('hide_on_mobile');?>
     <div class="row">
         <div class="down_arrow">
             <div class="arrow bounce">
-                <a class="fal fa-chevron-down fa-3x" href="#experience"></a>
+                <a href="<?php the_sub_field('scroll_link'); ?>"><span class="chevron bottom"></span></a>
             </div>
         </div>
         <div>

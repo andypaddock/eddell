@@ -23,7 +23,7 @@ if( !empty( $image ) ): ?>
                 <?php endif; ?>
                 <div class="down_arrow">
                     <div class="arrow bounce">
-                        <a class="fal fa-chevron-down fa-3x" href="#news"></a>
+                        <a href="<?php the_sub_field('scroll_link'); ?>"><span class="chevron bottom"></span></a>
                     </div>
                 </div>
             </div>

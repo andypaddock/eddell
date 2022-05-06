@@ -1,6 +1,6 @@
 .testimonial-slider {
   text-align: center;
-  padding: 10rem 0 5rem;
+  padding: 15rem 0 5rem;
   .quote {
     padding: 0 20%;
     .centre-line {
@@ -13,6 +13,11 @@
       border-right: 1px solid $color-white;
       height: 2rem;
       margin: 2rem 0;
+    }
+  }
+  .heading-primary--main {
+    &::before {
+      position: unset;
     }
   }
   .copy {

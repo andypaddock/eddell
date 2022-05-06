@@ -50,7 +50,7 @@ wp_reset_postdata();
                 <div class="row arrow-holder">
                     <div class="down_arrow">
                         <div class="arrow bounce">
-                            <a class="fal fa-chevron-down fa-3x" href="#contact"></a>
+                            <a href="<?php the_sub_field('scroll_link'); ?>"><span class="chevron bottom"></span></a>
                         </div>
                     </div>
                     <div>
