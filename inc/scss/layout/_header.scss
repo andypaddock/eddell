@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     @include respond(phone) {
-      height: calc(100vh - 70px) ;
+
     }
   .hero {
     display:grid;
@@ -18,8 +18,16 @@
       flex-direction: column;
       justify-content: flex-end;
       padding: 6rem 15%;
+      .heading-primary {
+        @include respond(big-desktop) {
+            width: 50%;
+          }
+      }
       .hero-text-box {
         padding-bottom: 5rem;
+        p {
+          margin-bottom: 3rem;
+        }
       }
       .down_arrow {
         padding-top: 40%;
@@ -49,6 +57,7 @@
     row-gap: 20vh;
     @include respond(phone) {
       justify-content: center;
+      min-height: 35rem;
     }
     .heading-secondary {
       color: $color-white;

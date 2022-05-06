@@ -212,7 +212,7 @@ var slideLeft = {
   distance: '40px',
   origin: 'left',
   opacity: 0.0,
-reset:true,
+
 duration: 1000,
 delay:250,
 mobile:false,
@@ -221,7 +221,7 @@ var slideRight = {
   distance: '40px',
   origin: 'right',
   opacity: 0.0,
-reset:true,
+
 duration: 1000,
 mobile:false,
 };
@@ -229,7 +229,7 @@ var slideDown = {
   distance: '40px',
   origin: 'top',
   opacity: 0.0,
-reset:true,
+
 duration: 1000,
 mobile:false,
 };
@@ -237,15 +237,14 @@ var slideUp = {
   distance: '40px',
   origin: 'bottom',
   opacity: 0.0,
-reset:true,
+
 duration: 1000,
 mobile:false,
 };
 var tileDown = {
-  distance: '40px',
-  origin: 'top',
-  opacity: 0.0,
-reset:true,
+distance: '40px',
+origin: 'top',
+opacity: 0.0,
 duration: 1000,
 mobile:false,
 interval:40,

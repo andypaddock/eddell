@@ -4,6 +4,12 @@
   &::-webkit-scrollbar {
     display: none;
   }
+  @include respond(phone) {
+    height: unset;
+    .row .split-col {
+      flex-direction: column;
+    }
+  }
   .controls {
     padding: 5rem 0;
     ul {
@@ -38,7 +44,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 25rem;
+        height: 15rem;
         @include backgroundCover;
         text-align: center;
       }
@@ -59,7 +65,7 @@
       }
       .date {
         text-align: center;
-        font-weight: 400;
+        font-weight: 300;
         padding-top: 2rem;
         letter-spacing: 2px;
         font-size: 1.4rem;
@@ -91,11 +97,31 @@
 
 .post-image {
   @include backgroundCover;
-  height: calc(100vh - 70px) ;
+  min-height: calc(100vh - 70px) ;
   position: sticky;
   top: 0;
+  @include respond(phone) {
+
+  }
 }
 .post-items {
   padding: 15%;
   overflow: hidden;
+  .arrow-holder {
+    padding-top: 5rem;
+  }
+}
+.news-item {
+  display: flex;
+  flex-direction: column;
+}
+.news-meta {
+  flex: 1;
+  text-align: center;
+  padding: 2rem 0 0;
+}
+.news-link {
+  .button {
+    padding: 1rem;
+  }
 }

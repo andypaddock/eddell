@@ -41,6 +41,10 @@
   .split-col {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    @include respond(phone) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
   }
 
   .col-1-of-2 {

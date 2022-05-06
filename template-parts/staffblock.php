@@ -12,36 +12,36 @@ $noMobile = get_sub_field('hide_on_mobile');?>
         <?php while ( have_rows('staff_members') ) : the_row();?>
         <?php $image = get_sub_field('content_image'); ?>
         <div class="staff-member">
-        
-            <div class="staff-image">
-                
-                    
 
-                        <img src="<?php echo esc_url($image['sizes']['large']); ?>"
-                            alt="<?php echo esc_attr($image['alt']); ?>" />
+            <div class="staff-image fmleft">
 
-                    
-                   
-               
-               
-            </div>
-        
-            <div class="staff-details">
 
-            <h2 class="heading-tertiary alt-text"><?php the_sub_field('content_title');?></h2>
-                        <p><?php the_sub_field('position');?></p>
-                        <div class="content-text"><?php the_sub_field('content_text');?></div>
+
+                <img src="<?php echo esc_url($image['sizes']['large']); ?>"
+                    alt="<?php echo esc_attr($image['alt']); ?>" />
+
+
+
+
 
             </div>
-        
+
+            <div class="staff-details fmright">
+
+                <h2 class="heading-tertiary alt-text"><?php the_sub_field('content_title');?></h2>
+                <p><?php the_sub_field('position');?></p>
+                <div class="content-text"><?php the_sub_field('content_text');?></div>
+
+            </div>
+
         </div>
         <?php endwhile; endif;?>
     </div>
     <div class="row">
-    <div class="down_arrow">
-        <div class="arrow bounce">
-            <a class="fal fa-chevron-down fa-3x" href="#content"></a>
+        <div class="down_arrow">
+            <div class="arrow bounce">
+                <a class="fal fa-chevron-down fa-3x" href="#experience"></a>
+            </div>
         </div>
-    </div>
-    <div>
+        <div>
 </section>

@@ -4,7 +4,7 @@
  * @package Rad Propulsion
  */
 ?>
-<footer class="footer">
+<footer class="footer" id="contact">
     <?php if (!is_page_template('page-templates/holding.php')):?>
     <?php $footerImage = get_field('footer_image','options'); ?>
     <div class="gradient-footer">
@@ -14,54 +14,58 @@
 
                 <div class="row">
                     <div class="footer-contact">
-                        <div class="logo">
-                            <div class="contact-block"><?php the_field('contact_block','options'); ?></div>
-                        </div>
-                        <div class="footer-newsletter">
+                        <div class="contact-block">
+                            <div class="contact-title">
+                                <h2 class="heading-primary">
+                                    <?php the_field('footer_main_text','options'); ?>
 
-                            <h2 class="heading-primary">
-                                <?php the_field('footer_main_text','options'); ?>
-                            </h2>
-                            <div class="slash">&#183;</div>
-                            <div class="form-holder">
-                                <?php
+                                    <div class="slash">&#183;</div>
+                                </h2>
+                            </div>
+                            <div class="contact-address">
+                                <div class="address-block"><?php the_field('contact_block','options'); ?></div>
+                                <div class="footer-newsletter">
+
+
+                                    <div class="form-holder">
+                                        <?php
         if ( get_field('footer_shortcode','options') ) {
             echo do_shortcode( get_field('footer_shortcode','options') );
         }
         ?></div>
-                            <?php the_field('newsletter_text','options'); ?>
+                                    <?php the_field('newsletter_text','options'); ?>
 
+                                </div>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>
             <div class="footer-link-container">
                 <div class="row">
-                    <div class="footer-navbar">
-                        <div class="nav-area">
-                            <menu>
-                                <?wp_nav_menu( array( 
+
+                    <menu class="footer-menu">
+                        <?wp_nav_menu( array( 
                         'theme_location' => 'footer-menu',
                     ) ); ?>
-                            </menu>
-                        </div>
-                    </div>
+                    </menu>
+
                 </div>
 
 
                 <div class="row footer-privacy">
                     <div class="copyright"><?php the_field('copy_text','options'); ?></div>
-                    <div class="silverless">
+                    <div class="silverless centered">
 
-                    <a
-                                href="<?php echo site_url(); ?>"><?php get_template_part("inc/img/eddelllogo"); ?></a>
+                        <a href="<?php echo site_url(); ?>"><?php get_template_part("inc/img/eddelllogo"); ?></a>
 
                     </div>
-                    <div class="silverless"><a href="https://silverless.co.uk">
+                    <div class="silverless right"><a href="https://silverless.co.uk">
 
-<?php get_template_part('inc/img/silverless', 'logo');?>
+                            <?php get_template_part('inc/img/silverless', 'logo');?>
 
-</a></div>
+                        </a></div>
                 </div>
             </div>
         </div>

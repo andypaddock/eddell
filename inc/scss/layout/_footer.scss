@@ -1,95 +1,6 @@
 .footer {
   font-size: 1.4rem;
   color: $color-grey-light-1;
-
-  @include respond(tab-port) {
-    padding: 8rem 0 0;
-  }
-
-  &__logo-box {
-    text-align: center;
-    margin-bottom: 8rem;
-
-    @include respond(tab-port) {
-      margin-bottom: 6rem;
-    }
-  }
-
-  &__logo {
-    width: 15rem;
-    height: auto;
-  }
-
-  &__navigation {
-    border-top: 1px solid $color-grey-dark;
-    padding-top: 2rem;
-    display: inline-block;
-
-    @include respond(tab-port) {
-      width: 100%;
-      text-align: center;
-    }
-  }
-
-  &__list {
-    list-style: none;
-  }
-
-  &__item {
-    display: inline-block;
-
-    &:not(:last-child) {
-      margin-right: 1.5rem;
-    }
-  }
-
-  &__link {
-    &:link,
-    &:visited {
-      color: $color-grey-light-1;
-      background-color: $color-grey-dark-3;
-      text-decoration: none;
-      text-transform: uppercase;
-      display: inline-block;
-      transition: all 0.2s;
-    }
-
-    &:hover,
-    &:active {
-      color: $color-primary;
-      box-shadow: 0 1rem 2rem rgba($color-black, 0.4);
-      transform: rotate(5deg) scale(1.3);
-    }
-  }
-
-  &__copyright {
-    border-top: 1px solid $color-grey-dark;
-    padding-top: 2rem;
-    width: 80%;
-    float: right;
-
-    @include respond(tab-port) {
-      width: 100%;
-      float: none;
-    }
-  }
-  // .gradient-footer {
-  //   position: relative;
-  //   width: 100%;
-  //   &:after {
-  //     position: absolute;
-  //     top: 0;
-  //     left: 0;
-  //     width: 100%;
-  //     height: 100%;
-  //     content: "";
-  //     background-image: linear-gradient(
-  //       0deg,
-  //       rgba(4, 11, 46, 0.1) 0,
-  //       rgba(4, 11, 46, 0.1) 100%
-  //     );
-  //   }
-  // }
   .footer-hero {
     height: calc(100vh - 70px) ;
     padding-top: 5rem;
@@ -101,18 +12,6 @@
       height: unset;
       min-height: 50rem;
     }
-    .centre-line {
-      display: flex;
-      padding: 1rem;
-      div {
-        flex: 1;
-      }
-    }
-    .line {
-      border-right: 1px solid $color-white;
-      height: 3rem;
-      padding-top: 1rem;
-    }
     .footer_text {
       text-align: center;
       .heading-secondary {
@@ -121,28 +20,69 @@
       }
     }
     .footer-contact {
-      display: flex;
-      @include respond(phone) {
-        flex-direction: column;
+      .contact-block {
+        display: grid;
+        grid-template-columns: 1fr 1fr 2fr 1fr;
+        grid-template-rows: 1fr 3fr;
+        @include respond(phone) {
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+        }
+        .contact-title {
+          grid-column: 3/4;
+          padding: 5rem 0 0;
+        }
+        .contact-address {
+          grid-row: 2;
+          grid-column: 2/4;
+          display: grid;
+          grid-template-columns: 1fr 2fr;
+          @include respond(phone) {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+          }
+        }
+        .heading-primary {
+          display: inline-block;
+        }
+        .slash {
+          color: $color-white;
+        }
+        div.wpforms-container-full .wpforms-form textarea.wpforms-field-medium {
+          height: 25rem;
+        }
       }
       .logo {
-        flex-basis: 30%;
+        flex-basis: 20%;
+        margin-left: 20%;
+        @include respond(phone) {
+          margin: 0;
+        }
         svg {
           margin-bottom: 3rem;
         }
       }
       .footer-newsletter {
-        flex-grow: 1;
+
+        @include respond(phone) {
+          margin: 0;
+        }
         .heading-primary {
 margin-bottom: 0rem;        }
         .slash {
           color: $color-white;
-          text-align: left;
           padding-bottom: 5rem;
         }
         p {
           font-size: 1.2rem;
-          width: 50%;
+          width: 60%;
+          margin-top: -4rem;
+          @include respond(phone) {
+            width: unset;
+            margin: 0;
+          }
         }
         @include respond(phone) {
           .mc4wp-form-fields {
@@ -208,26 +148,7 @@ margin-bottom: 0rem;        }
       @include respond(phone) {
         align-self: flex-start;
       }
-      ul {
-        list-style: none;
-        column-count: 3;
-        li {
-          border-left: 1px solid $color-primary;
-          @include respond(phone) {
-            &:nth-of-type(4) a {
-              padding-top: 0;
-            }
-          }
-
-          a {
-            color: $color-white;
-            text-transform: uppercase;
-            text-decoration: none;
-            padding: 2rem;
-            font-size: 1.4rem;
-          }
-        }
-      }
+      
     }
     .logo {
       display: flex;
@@ -302,25 +223,50 @@ margin-bottom: 0rem;        }
       }
     }
   }
+  .footer-menu{
+    
+      ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid $color-white;
+        padding: 4rem 0;
+        li {
+          @include respond(phone) {
+            &:nth-of-type(4) a {
+              padding-top: 0;
+            }
+          }
+
+          a {
+            color: $color-white;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 1.4rem;
+            font-weight: 300;
+          }
+        }
+      }
+    
+  }
 }
 
 .footer-privacy {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-
+padding-bottom: 3rem;
   .copyright {
     display: flex;
     align-items: center;
+    font-size: 1rem;
   }
   .silverless {
-    text-align: center;
     svg {
       fill: $color-white;
     }
 
     #logo {
-      width: 10rem;
-      height: 3rem;
+      width: 8rem;
     }
 
     #silverless {
@@ -332,6 +278,12 @@ margin-bottom: 0rem;        }
       opacity: 0;
       transform: translateY(50px);
       transition: 1s transform ease, 2s opacity ease;
+    }
+    &.centered {
+      text-align: center;
+    }
+    &.right {
+      text-align: right;
     }
 
     &:hover {

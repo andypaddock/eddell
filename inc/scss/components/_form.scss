@@ -41,14 +41,18 @@
       opacity: 1;
     }
     div.wpforms-container-full .wpforms-form button[type="submit"] {
-      background: $color-primary;
+      background: #86837D;
       color: $color-white;
       border: none;
       text-transform: uppercase;
-      padding: 1rem 2rem;
+      padding: 1rem 5rem;
       @include respond(phone) {
         width: 100%;
       }
+    }
+    div.wpforms-container-full .wpforms-form .wpforms-submit-container {
+      display: flex;
+      justify-content: end;
     }
     .footer-form p {
       margin: 0 0 28px;

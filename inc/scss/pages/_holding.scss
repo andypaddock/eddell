@@ -23,6 +23,15 @@
       }
     }
   }
+  .heading-primary {
+    color: $color-white;
+    &--main {
+      &::before,
+      &::after {
+        content: none;
+      }
+    }
+  }
   .holding-links {
     text-align: center;
     .links {

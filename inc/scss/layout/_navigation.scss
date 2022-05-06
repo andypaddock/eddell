@@ -34,6 +34,7 @@
 .top-navbar {
   background: $color-white;
   position: sticky;
+  box-shadow: 0 10px 10px rgb(0 0 0 / 0%), 0 6px 6px rgb(0 0 0 / 10%);
   top: 0;
   .logo {
     svg {
@@ -66,7 +67,7 @@
       a {
         color: $color-black;
         font-weight: 400;
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         letter-spacing: 1.25px;
         &::after {
           content: "";
