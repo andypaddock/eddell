@@ -18,6 +18,9 @@
       flex-direction: column;
       justify-content: flex-end;
       padding: 6rem 15%;
+      @include respond(phone) {
+        padding: 6rem 2rem;
+      }
       .heading-primary {
         @include respond(big-desktop) {
             width: 50%;

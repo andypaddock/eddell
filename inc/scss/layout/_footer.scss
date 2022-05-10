@@ -231,11 +231,15 @@ margin-bottom: 0rem;        }
         justify-content: space-between;
         border-top: 1px solid $color-white;
         padding: 4rem 0;
+        @include respond(phone) {
+          flex-direction: column;
+          align-items: center;
+          margin: 2rem 0;
+          border-bottom: 1px solid $color-white;
+        }
         li {
           @include respond(phone) {
-            &:nth-of-type(4) a {
-              padding-top: 0;
-            }
+            padding-bottom: 2rem;
           }
 
           a {
@@ -255,10 +259,20 @@ margin-bottom: 0rem;        }
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 padding-bottom: 3rem;
+@include respond(phone) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-gap: 3rem;
+  margin: 3rem 0;
+}
   .copyright {
     display: flex;
     align-items: center;
     font-size: 1rem;
+    @include respond(phone) {
+      order: 2;
+    }
   }
   .silverless {
     svg {
@@ -281,9 +295,17 @@ padding-bottom: 3rem;
     }
     &.centered {
       text-align: center;
+      @include respond(phone) {
+        order: 1;
+        padding-top: 3rem;
+      }
     }
     &.right {
       text-align: right;
+      @include respond(phone) {
+        order: 3;
+        padding-bottom: 3rem;
+      }
     }
 
     &:hover {

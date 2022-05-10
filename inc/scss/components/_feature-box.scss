@@ -264,6 +264,9 @@ overflow: scroll;
   }
   .scroll-text {
     padding: 15%;
+    @include respond(phone) {
+      padding: 6rem 5rem;
+    }
     .heading-secondary {
       position: relative;
     }

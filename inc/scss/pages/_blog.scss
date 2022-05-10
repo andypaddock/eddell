@@ -1,6 +1,22 @@
 .single {
   .header {
-    height: 50vh;
+    min-height: unset;
+    height: 75vh;
+    .heading-primary {
+      color: $color-white;
+      &--main::before {
+        position: unset;
+      }
+    }
+    .hero {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .down_arrow a{
+      color: $color-white;
+    }
   }
   .news-header {
     text-align: center;
@@ -14,4 +30,8 @@
       padding: 2rem 0;
     }
   }
+  .flex-container {
+    padding: 3rem 0;
+  }
+
 }

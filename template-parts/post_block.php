@@ -14,38 +14,53 @@ $postImage = get_sub_field('post_image'); ?>
                     <span class="heading-primary"><?php the_sub_field('post_title'); ?></span>
                 </h2>
                 <div class="post-grid">
-                    <?php
-$loop = new WP_Query(
-    array(
-        'posts_per_page' => -1,
-        'post__not_in' => array( $post->ID )
-    )
-);
-$counter = 0;
-while ( $loop->have_posts() ) : $loop->the_post();
-$mainImage = get_the_post_thumbnail_url(get_the_ID(),'large');
-$counter++;
 
-?>
-                    <?php $terms = get_the_category( $post->ID ); ?>
 
+                    <?php if( have_rows('news_links') ): ?>
+
+                    <?php while( have_rows('news_links') ): the_row(); 
+        $mainImage = get_sub_field('news_image');
+        $link = get_sub_field('news_link');
+        $link_url = $link['url'];
+    $link_title = $link['title'];
+    $link_target = $link['target'] ? $link['target'] : '_self';
+        ?>
                     <div class="mix quote news-item">
-                        <div class="news-image"><a href="<?php echo get_permalink( $post->ID ); ?>">
-                                <div class="test-image" style="background-image: url(<?php echo $mainImage; ?>)">
+                        <div class="news-image"><a href="<?php echo esc_url( $link_url ); ?>"
+                                target="<?php echo esc_attr( $link_target ); ?>">
+                                <div class="test-image"
+                                    style="background-image: url(<?php echo esc_url($mainImage['sizes']['large']); ?>)">
                                 </div>
                             </a></div>
                         <div class="news-meta"> <span class="date">
-                                <?php echo get_the_date( 'd/m/y' ); ?>
+                                <?php the_sub_field('news_date'); ?>
                             </span>
-                            <h2 class="heading-tertiary alt-text upper"><?php the_title(  ); ?></h2>
+                            <h2 class="heading-tertiary alt-text upper"><?php the_sub_field('news_headline'); ?></h2>
                         </div>
-                        <div class="news-link"> <a class="button" href="<?php echo get_permalink( $post->ID ); ?>">Read
-                                More</a></div>
+                        <div class="news-link">
+
+                            <?php 
+
+if( $link ): 
+    
+    ?>
+                            <a class="button" href="<?php echo esc_url( $link_url ); ?>"
+                                target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+                            <?php endif; ?>
+
+
+                        </div>
 
                     </div>
-                    <?php endwhile;
-wp_reset_postdata();
-?>
+
+
+
+
+
+
+                    <?php endwhile; ?>
+                    <?php endif; ?>
+
                 </div>
                 <div class="row arrow-holder">
                     <div class="down_arrow">

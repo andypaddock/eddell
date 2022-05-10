@@ -7,7 +7,8 @@ $heroPoster = get_field('video_poster');?>
 
 
 
-<div class="hero" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>)">
+<div class="posthero hero" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>)">
+
     <div class="row header__text-box">
         <h1 class="heading-primary">
             <span class="heading-primary--main"><?php echo esc_html( get_the_title() ); ?></span>

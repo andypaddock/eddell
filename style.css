@@ -311,23 +311,13 @@ body {
   margin-bottom: 3rem;
   font-size: 4rem;
   font-weight: 300;
-  font-family: "Didot", sans-serif;
+  font-family: "Didot", serif;
   line-height: 1.4;
 }
 .heading-primary--main {
   display: block;
   font-weight: 300;
   letter-spacing: 0.2rem;
-  -webkit-animation-name: moveInLeft;
-          animation-name: moveInLeft;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
-  /*
-      animation-delay: 3s;
-      animation-iteration-count: 3;
-      */
 }
 .heading-primary--main::before {
   content: open-quote;
@@ -348,8 +338,6 @@ body {
   font-size: 1.6rem;
   font-weight: 400;
   letter-spacing: 0.5rem;
-  -webkit-animation: moveInRight 1s ease-out;
-          animation: moveInRight 1s ease-out;
 }
 @media only screen and (max-width: 37.5em) {
   .heading-primary--sub {
@@ -366,7 +354,7 @@ body {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   line-height: 1.5;
-  font-family: "Didot", sans-serif;
+  font-family: "Didot", serif;
 }
 .heading-secondary.alt-text {
   color: #fff;
@@ -378,8 +366,6 @@ body {
   display: block;
   font-size: 2.5rem;
   font-weight: 300;
-  -webkit-animation: moveInRight 1s ease-out;
-          animation: moveInRight 1s ease-out;
   font-family: "Lato", sans-serif;
 }
 @media only screen and (max-width: 37.5em) {
@@ -402,7 +388,7 @@ body {
 .heading-tertiary {
   font-size: 2rem;
   font-weight: 200;
-  font-family: "Didot", sans-serif;
+  font-family: "Didot", serif;
 }
 .heading-tertiary.light {
   font-weight: 200;
@@ -425,7 +411,7 @@ ul {
 .paragraph:not(:last-child),
 p:not(:last-child),
 ul:not(:last-child) {
-  margin-bottom: 6rem;
+  margin-bottom: 2rem;
 }
 
 blockquote {
@@ -1307,6 +1293,11 @@ blockquote {
 .image-scroll-container .scroll-text {
   padding: 15%;
 }
+@media only screen and (max-width: 37.5em) {
+  .image-scroll-container .scroll-text {
+    padding: 6rem 5rem;
+  }
+}
 .image-scroll-container .scroll-text .heading-secondary {
   position: relative;
 }
@@ -1316,7 +1307,7 @@ blockquote {
 }
 .image-scroll-container .scroll-text h3 {
   text-transform: uppercase;
-  font-family: "Didot", sans-serif;
+  font-family: "Didot", serif;
   padding-bottom: 1rem;
   font-size: 1.5rem;
 }
@@ -1868,7 +1859,7 @@ blockquote {
   letter-spacing: 2px;
   position: relative;
   padding: 2rem 3rem;
-  font-family: "Didot", sans-serif;
+  font-family: "Didot", serif;
   cursor: pointer;
   background: #b0b297;
   font-weight: bold;
@@ -2233,6 +2224,11 @@ blockquote {
 }
 .testimonial-slider .quote {
   padding: 0 20%;
+}
+@media only screen and (max-width: 37.5em) {
+  .testimonial-slider .quote {
+    padding: 0;
+  }
 }
 .testimonial-slider .quote .centre-line {
   display: -webkit-box;
@@ -2697,7 +2693,7 @@ blockquote {
           justify-content: center;
 }
 .double-image .image-container .left-image img, .double-image .image-container .right-image img {
-  max-height: 15rem;
+  max-height: 10rem;
 }
 .double-image .image-container .left-image {
   border-right: 1px solid #86837D;
@@ -3026,8 +3022,21 @@ blockquote {
   padding: 4rem 0;
 }
 @media only screen and (max-width: 37.5em) {
-  .footer .footer-menu ul li:nth-of-type(4) a {
-    padding-top: 0;
+  .footer .footer-menu ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 2rem 0;
+    border-bottom: 1px solid #fff;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .footer .footer-menu ul li {
+    padding-bottom: 2rem;
   }
 }
 .footer .footer-menu ul li a {
@@ -3045,6 +3054,22 @@ blockquote {
   grid-template-columns: 1fr 1fr 1fr;
   padding-bottom: 3rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .footer-privacy {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    grid-gap: 3rem;
+    margin: 3rem 0;
+  }
+}
 .footer-privacy .copyright {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3053,6 +3078,13 @@ blockquote {
       -ms-flex-align: center;
           align-items: center;
   font-size: 1rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .footer-privacy .copyright {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
 }
 .footer-privacy .silverless svg {
   fill: #fff;
@@ -3077,8 +3109,24 @@ blockquote {
 .footer-privacy .silverless.centered {
   text-align: center;
 }
+@media only screen and (max-width: 37.5em) {
+  .footer-privacy .silverless.centered {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    padding-top: 3rem;
+  }
+}
 .footer-privacy .silverless.right {
   text-align: right;
+}
+@media only screen and (max-width: 37.5em) {
+  .footer-privacy .silverless.right {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    padding-bottom: 3rem;
+  }
 }
 .footer-privacy .silverless:hover {
   cursor: pointer;
@@ -3291,6 +3339,11 @@ footer .w90 {
       -ms-flex-pack: end;
           justify-content: flex-end;
   padding: 6rem 15%;
+}
+@media only screen and (max-width: 37.5em) {
+  .header .hero .hero-text {
+    padding: 6rem 2rem;
+  }
 }
 @media only screen and (min-width: 112.5em) {
   .header .hero .hero-text .heading-primary {
@@ -4125,7 +4178,32 @@ footer .w90 {
   }
 }
 .single .header {
-  height: 50vh;
+  min-height: unset;
+  height: 75vh;
+}
+.single .header .heading-primary {
+  color: #fff;
+}
+.single .header .heading-primary--main::before {
+  position: unset;
+}
+.single .header .hero {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.single .header .down_arrow a {
+  color: #fff;
 }
 .single .news-header {
   text-align: center;
@@ -4136,6 +4214,9 @@ footer .w90 {
 }
 .single .section-text .heading-tertiary {
   padding: 2rem 0;
+}
+.single .flex-container {
+  padding: 3rem 0;
 }
 
 .page-template-holding main {
@@ -4572,7 +4653,7 @@ article p {
   text-decoration: none;
   font-size: 1.5rem;
   position: relative;
-  font-family: "Didot", sans-serif;
+  font-family: "Didot", serif;
 }
 .read-more a::before,
 .read-less a::before {
@@ -5123,7 +5204,7 @@ img.mfp-img {
   text-align: center;
 }
 .timeline-slide .property {
-  font-family: "Didot", sans-serif;
+  font-family: "Didot", serif;
   color: #b0b297;
   font-size: 1.75rem;
 }

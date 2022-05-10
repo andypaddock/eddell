@@ -3,6 +3,9 @@
   padding: 15rem 0 5rem;
   .quote {
     padding: 0 20%;
+    @include respond(phone) {
+      padding: 0;
+    }
     .centre-line {
       display: flex;
       div {
