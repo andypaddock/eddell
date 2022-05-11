@@ -1261,6 +1261,7 @@ blockquote {
   grid-template-columns: 1fr 1fr;
   height: calc(100vh - 70px);
   overflow: scroll;
+  scrollbar-width: none;
   overflow: scroll;
 }
 .image-scroll-container::-webkit-scrollbar {
@@ -2244,6 +2245,11 @@ blockquote {
   border-right: 1px solid #fff;
   height: 2rem;
   margin: 2rem 0;
+}
+.testimonial-slider .owl-carousel .owl-item img {
+  width: unset;
+  height: 3rem;
+  margin: 0 auto;
 }
 .testimonial-slider .heading-primary--main::before {
   position: unset;
