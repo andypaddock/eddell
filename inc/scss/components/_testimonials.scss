@@ -228,16 +228,19 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
-    padding: 15%;
+    padding: 6rem 15%;
+    @include respond(phone) {
+      align-items: center;
+    }
     .heading-primary {
-      margin-bottom: 0;
+      margin-bottom: 2rem;
     }
     img {
       max-height: 3rem;
       object-fit: contain
     }
     .down_arrow {
-      padding-top: 25%
+      padding-top: 50%
     }
   }
   .testimonial-image {

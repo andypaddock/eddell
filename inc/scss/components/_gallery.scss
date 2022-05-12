@@ -182,6 +182,7 @@
     border-right: 1px solid #86837D;
     @include respond(phone) {
       border-right: none;
+      padding-bottom: 6rem;
     }
   }
   }

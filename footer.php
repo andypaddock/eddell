@@ -8,8 +8,7 @@
     <?php if (!is_page_template('page-templates/holding.php')):?>
     <?php $footerImage = get_field('footer_image','options'); ?>
     <div class="gradient-footer">
-        <div class="footer-hero"
-            style="background-image: linear-gradient(180deg, rgba(34, 27, 11,1) 0%, rgba(34, 27, 11,0) 30%), url(<?php echo $footerImage['url']; ?>)">
+        <div class="footer-hero" style="background-image: url(<?php echo $footerImage['url']; ?>)">
             <div class="footer-text-container">
 
                 <div class="row">
@@ -81,6 +80,8 @@
 </main>
 <?php if (!is_page_template('page-templates/holding.php')):?>
 <div class="sidebar">
+    <div class="logo-sidebar"><a href="<?php echo site_url(); ?>"><?php get_template_part("inc/img/eddelllogo"); ?></a>
+    </div>
     <?wp_nav_menu( array( 
                         'theme_location' => 'mobile-menu',
                         'container' => false,

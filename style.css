@@ -237,6 +237,7 @@ html {
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  overflow-x: hidden;
 }
 @media only screen and (max-width: 56.25em) {
   body {
@@ -314,6 +315,11 @@ body {
   font-family: "Didot", serif;
   line-height: 1.4;
 }
+@media only screen and (max-width: 37.5em) {
+  .heading-primary {
+    text-align: center;
+  }
+}
 .heading-primary--main {
   display: block;
   font-weight: 300;
@@ -324,12 +330,17 @@ body {
   position: absolute;
   left: -2rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .heading-primary--main::before {
+    position: unset;
+  }
+}
 .heading-primary--main::after {
   content: close-quote;
 }
 @media only screen and (max-width: 37.5em) {
   .heading-primary--main {
-    letter-spacing: 1rem;
+    text-align: center;
     font-size: 2.5rem;
   }
 }
@@ -370,8 +381,8 @@ body {
 }
 @media only screen and (max-width: 37.5em) {
   .heading-secondary--sub {
-    letter-spacing: 0.5rem;
     padding: 0 1rem;
+    font-size: 2.2rem;
   }
 }
 @media only screen and (max-width: 56.25em) {
@@ -836,7 +847,7 @@ blockquote {
 
 .staff-block .down_arrow {
   text-align: center;
-  padding: 0 0 5rem;
+  padding: 0 0 6rem;
 }
 .staff-block .staff-member {
   display: -ms-grid;
@@ -865,8 +876,6 @@ blockquote {
   border-radius: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-filter: grayscale(1);
-          filter: grayscale(1);
 }
 @media only screen and (max-width: 37.5em) {
   .staff-block .staff-member .staff-image {
@@ -1259,13 +1268,6 @@ blockquote {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  height: calc(100vh - 70px);
-  overflow: scroll;
-  scrollbar-width: none;
-  overflow: scroll;
-}
-.image-scroll-container::-webkit-scrollbar {
-  display: none;
 }
 @media only screen and (max-width: 37.5em) {
   .image-scroll-container {
@@ -1286,17 +1288,23 @@ blockquote {
   background-repeat: no-repeat !important;
   height: calc(100vh - 70px);
   position: sticky;
-  top: 0;
+  top: 70px;
 }
 .image-scroll-container .image-container img {
   width: 100%;
 }
+@media only screen and (max-width: 37.5em) {
+  .image-scroll-container .image-container {
+    position: unset;
+  }
+}
 .image-scroll-container .scroll-text {
-  padding: 15%;
+  padding: 6rem 15%;
 }
 @media only screen and (max-width: 37.5em) {
   .image-scroll-container .scroll-text {
     padding: 6rem 5rem;
+    text-align: center;
   }
 }
 .image-scroll-container .scroll-text .heading-secondary {
@@ -1305,6 +1313,11 @@ blockquote {
 .image-scroll-container .scroll-text .slash {
   text-align: left;
   padding: 2rem 0 2.5rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .image-scroll-container .scroll-text .slash {
+    text-align: center;
+  }
 }
 .image-scroll-container .scroll-text h3 {
   text-transform: uppercase;
@@ -1322,6 +1335,12 @@ blockquote {
   background-repeat: no-repeat;
   background-attachment: fixed;
   height: 45rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .scroll-image .single-image {
+    background-position: 47%;
+    height: 80vh;
+  }
 }
 
 .contact-links {
@@ -2474,10 +2493,17 @@ blockquote {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding: 15%;
+  padding: 6rem 15%;
+}
+@media only screen and (max-width: 37.5em) {
+  .test-with-image .testimonial-container {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 .test-with-image .testimonial-container .heading-primary {
-  margin-bottom: 0;
+  margin-bottom: 2rem;
 }
 .test-with-image .testimonial-container img {
   max-height: 3rem;
@@ -2485,7 +2511,7 @@ blockquote {
      object-fit: contain;
 }
 .test-with-image .testimonial-container .down_arrow {
-  padding-top: 25%;
+  padding-top: 50%;
 }
 .test-with-image .testimonial-image {
   background-size: cover !important;
@@ -2707,12 +2733,14 @@ blockquote {
 @media only screen and (max-width: 37.5em) {
   .double-image .image-container .left-image {
     border-right: none;
+    padding-bottom: 6rem;
   }
 }
 
 .footer {
   font-size: 1.4rem;
   color: #f7f7f7;
+  background: #141006;
 }
 .footer .footer-hero {
   height: calc(100vh - 70px);
@@ -2826,6 +2854,11 @@ blockquote {
     text-align: center;
   }
 }
+@media only screen and (max-width: 37.5em) {
+  .footer .footer-hero .footer-contact .contact-block .contact-address .address-block p {
+    padding: 2rem 0;
+  }
+}
 .footer .footer-hero .footer-contact .contact-block .heading-primary {
   display: inline-block;
 }
@@ -2850,7 +2883,7 @@ blockquote {
 }
 @media only screen and (max-width: 37.5em) {
   .footer .footer-hero .footer-contact .footer-newsletter {
-    margin: 0;
+    display: none;
   }
 }
 .footer .footer-hero .footer-contact .footer-newsletter .heading-primary {
@@ -3036,13 +3069,13 @@ blockquote {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 2rem 0;
+    margin: 4rem 0;
     border-bottom: 1px solid #fff;
   }
 }
 @media only screen and (max-width: 37.5em) {
   .footer .footer-menu ul li {
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
   }
 }
 .footer .footer-menu ul li a {
@@ -3050,7 +3083,7 @@ blockquote {
   text-transform: uppercase;
   text-decoration: none;
   font-size: 1.4rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .footer-privacy {
@@ -3074,6 +3107,7 @@ blockquote {
             align-items: center;
     grid-gap: 3rem;
     margin: 3rem 0;
+    padding: 0 3rem;
   }
 }
 .footer-privacy .copyright {
@@ -3148,6 +3182,10 @@ blockquote {
 
 .form-holder div.wpforms-container-full {
   margin-bottom: 0;
+}
+
+.footer-link-container {
+  padding: 0 3rem;
 }
 
 .row {
@@ -3349,7 +3387,11 @@ footer .w90 {
 @media only screen and (max-width: 37.5em) {
   .header .hero .hero-text {
     padding: 6rem 2rem;
+    text-align: center;
   }
+}
+.header .hero .hero-text img {
+  height: 2rem;
 }
 @media only screen and (min-width: 112.5em) {
   .header .hero .hero-text .heading-primary {
@@ -3364,6 +3406,11 @@ footer .w90 {
 }
 .header .hero .hero-text .down_arrow {
   padding-top: 20%;
+}
+@media only screen and (max-width: 37.5em) {
+  .header .hero .hero-text .down_arrow {
+    padding: 0;
+  }
 }
 .header__quote-box {
   text-align: center;
@@ -3562,12 +3609,15 @@ footer .w90 {
 
 .sidebar {
   height: 100%;
-  width: 400px;
+  width: 100vw;
   position: fixed;
   top: 0;
   z-index: 1;
   right: 0;
-  background-color: #b0b297;
+  background-color: #141006;
+}
+.sidebar .logo-sidebar {
+  padding: 1.8rem 4rem;
 }
 
 .bar {
@@ -3801,6 +3851,10 @@ footer .w90 {
 @media only screen and (max-width: 56.25em) {
   .logo-mobile {
     display: block;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    background-color: #F8F6F4;
   }
 }
 .logo-mobile a {
@@ -4641,7 +4695,7 @@ footer .w90 {
 
 .owl-theme .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots .owl-dot:hover span {
-  background: #869791;
+  background: #86837D;
 }
 
 article p {

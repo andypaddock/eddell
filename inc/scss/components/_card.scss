@@ -255,7 +255,7 @@
 .staff-block {
   .down_arrow {
     text-align: center;
-    padding: 0 0 5rem;
+    padding: 0 0 6rem;
   }
   .staff-member {
     display: grid;
@@ -272,7 +272,9 @@
         width: 25rem;
         border-radius: 100%;
         object-fit: cover;
-        filter: grayscale(1);
+        // filter: grayscale(1);
+        
+        
       }
       @include respond(phone) {
         text-align: center;

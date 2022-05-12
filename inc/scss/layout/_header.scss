@@ -20,6 +20,10 @@
       padding: 6rem 15%;
       @include respond(phone) {
         padding: 6rem 2rem;
+        text-align: center;
+      }
+      img {
+        height: 2rem;
       }
       .heading-primary {
         @include respond(big-desktop) {
@@ -34,6 +38,10 @@
       }
       .down_arrow {
         padding-top: 20%;
+        @include respond(phone) {
+          padding: 0;
+
+        }
       }
     }
   }
@@ -211,12 +219,15 @@
 
 .sidebar {
   height: 100%;
-  width: 400px;
+  width: 100vw;
   position: fixed;
   top: 0;
   z-index: 1;
   right: 0;
-  background-color: $color-primary;
+  background-color: $color-black;
+  .logo-sidebar {
+    padding: 1.8rem 4rem;
+  }
 }
 
 .bar {
@@ -436,6 +447,10 @@ nav {
   display: none;
   @include respond(tab-port) {
     display: block;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    background-color: $color-primary-bg;
   }
   a {
     color: $color-white;

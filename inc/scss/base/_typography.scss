@@ -14,6 +14,9 @@ body {
   font-weight: 300;
   font-family: $default-font-heading;
   line-height: 1.4;
+  @include respond(phone) {
+    text-align: center;
+  }
   &--main {
     display: block;
     font-weight: 300;
@@ -22,12 +25,15 @@ body {
       content: open-quote;
       position: absolute;
       left: -2rem;
+      @include respond(phone) {
+        position: unset;
+      }
     }
     &::after {
       content: close-quote;
     }
     @include respond(phone) {
-      letter-spacing: 1rem;
+      text-align: center;
       font-size: 2.5rem;
     }
   }
@@ -64,8 +70,8 @@ body {
     font-weight: 300;
     font-family: $default-font-family;
     @include respond(phone) {
-      letter-spacing: 0.5rem;
       padding: 0 1rem;
+      font-size: 2.2rem;
     }
   }
 

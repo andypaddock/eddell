@@ -239,14 +239,8 @@
 .image-scroll-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: calc(100vh - 70px) ;
-  overflow: scroll;
-  scrollbar-width: none;
   
-overflow: scroll;
-&::-webkit-scrollbar {
-  display: none;
-}
+
 @include respond(phone) {
   display: flex;
   flex-direction: column;
@@ -258,15 +252,20 @@ overflow: scroll;
     @include backgroundCover;
     height: calc(100vh - 70px) ;
     position: sticky;
-    top: 0;
+    top: 70px;
     img {
       width: 100%;
     }
+    @include respond(phone) {
+      position: unset;
+    
+    }
   }
   .scroll-text {
-    padding: 15%;
+    padding: 6rem 15%;
     @include respond(phone) {
       padding: 6rem 5rem;
+      text-align: center;
     }
     .heading-secondary {
       position: relative;
@@ -274,6 +273,9 @@ overflow: scroll;
     .slash {
       text-align: left;
       padding: 2rem 0 2.5rem;
+      @include respond(phone) {
+        text-align: center;
+      }
     }
     h3 {
       text-transform: uppercase;
@@ -288,5 +290,9 @@ overflow: scroll;
   .single-image {
     @include backgroundPara;
     height: 45rem;
+    @include respond(phone) {
+      background-position: 47%;
+      height: 80vh;
+    }
   }
 }
