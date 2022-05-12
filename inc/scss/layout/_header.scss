@@ -18,6 +18,9 @@
       flex-direction: column;
       justify-content: flex-end;
       padding: 6rem 15%;
+      @include respond(tab-port) {
+        padding: 6rem 2rem;
+      }
       @include respond(phone) {
         padding: 6rem 2rem;
         text-align: center;
@@ -255,18 +258,19 @@
   right: 3rem;
   top: 2rem;
   display: none;
-  @include respond(tab-port) {
-    display: block;
-  }
+z-index: 99;
+@include respond(tab-port) {
+  display: block;
+}
 }
 
 .nav-right.visible-xs {
   z-index: 3;
 }
 
-.hidden-xs {
-  display: none;
-}
+// .hidden-xs {
+//   display: none;
+// }
 
 .middle {
   margin: 0 auto;
@@ -276,7 +280,7 @@
   transition: all 0.7s ease;
 }
 
-.nav-right.visible-xs .active .bar {
+.nav-right .active .bar {
   background-color: #fff;
   transition: all 0.7s ease;
 }
@@ -294,7 +298,7 @@
 }
 
 .move-to-left {
-  transform: translateX(-400px);
+  transform: translateX(-100vw);
 }
 
 nav {
@@ -400,14 +404,14 @@ nav {
 
 @media (min-width: 768px) {
   .nav-right {
-    position: absolute;
+    // position: absolute;
   }
-  // .hidden-xs {
-  //   display: block;
-  // }
-  // .visible-xs {
-  //   display: none;
-  // }
+  .hidden-xs {
+    display: block;
+  }
+  .visible-xs {
+    display: none;
+  }
 }
 .down_arrow {
 
@@ -449,7 +453,7 @@ nav {
     display: block;
     position: sticky;
     top: 0;
-    z-index: 99;
+    z-index: 5;
     background-color: $color-primary-bg;
   }
   a {

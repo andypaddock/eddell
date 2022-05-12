@@ -1651,13 +1651,6 @@ blockquote {
   height: 100%;
 }
 
-.post-block {
-  height: calc(100vh - 70px);
-  overflow: scroll;
-}
-.post-block::-webkit-scrollbar {
-  display: none;
-}
 @media only screen and (max-width: 37.5em) {
   .post-block {
     height: unset;
@@ -1779,13 +1772,17 @@ blockquote {
   /* !important added as result of rule not working inside display:grid */
   background-position: center center !important;
   background-repeat: no-repeat !important;
-  min-height: calc(100vh - 70px);
+  height: calc(100vh - 70px);
   position: sticky;
-  top: 0;
+  top: 70px;
 }
 .post-items {
   padding: 15%;
-  overflow: hidden;
+}
+@media only screen and (max-width: 75em) {
+  .post-items {
+    padding: 6rem;
+  }
 }
 .post-items .arrow-holder {
   padding-top: 5rem;
@@ -3384,6 +3381,11 @@ footer .w90 {
           justify-content: flex-end;
   padding: 6rem 15%;
 }
+@media only screen and (max-width: 56.25em) {
+  .header .hero .hero-text {
+    padding: 6rem 2rem;
+  }
+}
 @media only screen and (max-width: 37.5em) {
   .header .hero .hero-text {
     padding: 6rem 2rem;
@@ -3642,6 +3644,7 @@ footer .w90 {
   right: 3rem;
   top: 2rem;
   display: none;
+  z-index: 99;
 }
 @media only screen and (max-width: 56.25em) {
   .nav-right {
@@ -3653,10 +3656,6 @@ footer .w90 {
   z-index: 3;
 }
 
-.hidden-xs {
-  display: none;
-}
-
 .middle {
   margin: 0 auto;
 }
@@ -3666,7 +3665,7 @@ footer .w90 {
   transition: all 0.7s ease;
 }
 
-.nav-right.visible-xs .active .bar {
+.nav-right .active .bar {
   background-color: #fff;
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
@@ -3687,8 +3686,8 @@ footer .w90 {
 }
 
 .move-to-left {
-  -webkit-transform: translateX(-400px);
-          transform: translateX(-400px);
+  -webkit-transform: translateX(-100vw);
+          transform: translateX(-100vw);
 }
 
 .sidebar-list {
@@ -3800,8 +3799,12 @@ footer .w90 {
   }
 }
 @media (min-width: 768px) {
-  .nav-right {
-    position: absolute;
+  .hidden-xs {
+    display: block;
+  }
+
+  .visible-xs {
+    display: none;
   }
 }
 .down_arrow a {
@@ -3853,7 +3856,7 @@ footer .w90 {
     display: block;
     position: sticky;
     top: 0;
-    z-index: 99;
+    z-index: 5;
     background-color: #F8F6F4;
   }
 }
@@ -4045,10 +4048,6 @@ footer .w90 {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-}
-.top-navbar .logo {
-  -ms-flex-preferred-size: 25rem;
-      flex-basis: 25rem;
 }
 .top-navbar .logo svg path {
   fill: #141006;

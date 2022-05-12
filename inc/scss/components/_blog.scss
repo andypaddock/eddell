@@ -1,9 +1,4 @@
 .post-block {
-  height: calc(100vh - 70px) ;
-  overflow: scroll;
-  &::-webkit-scrollbar {
-    display: none;
-  }
   @include respond(phone) {
     height: unset;
     .row .split-col {
@@ -97,16 +92,18 @@
 
 .post-image {
   @include backgroundCover;
-  min-height: calc(100vh - 70px) ;
+  height: calc(100vh - 70px) ;
   position: sticky;
-  top: 0;
+  top: 70px;
   @include respond(phone) {
 
   }
 }
 .post-items {
   padding: 15%;
-  overflow: hidden;
+  @include respond(tab-land) {
+padding: 6rem;
+  }
   .arrow-holder {
     padding-top: 5rem;
   }

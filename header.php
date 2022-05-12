@@ -21,7 +21,7 @@
 
 <body <?php body_class(); ?>>
     <?php if (!is_page_template('page-templates/holding.php')):?>
-    <div class="nav-right visible-xs">
+    <div class="nav-right">
         <div class="navbutton" id="btn">
             <div class="bar top"></div>
             <div class="bar middle"></div>
@@ -37,14 +37,14 @@
         <div class="logo-mobile"><a
                 href="<?php echo site_url(); ?>"><?php get_template_part("inc/img/eddelllogo"); ?></a>
         </div>
-        <div class="nav-right hidden-xs">
+        <div class="nav-right">
             <div class="navbutton" id="btn">
                 <div class="bar top"></div>
                 <div class="bar middle"></div>
                 <div class="bar bottom"></div>
             </div>
         </div>
-        
+
         <div class="top-navbar">
             <?php $logoSwitch = get_field('logo_color','options');
          if ($logoSwitch == 'light'): ?>
@@ -63,7 +63,7 @@
             </nav>
         </div>
 
-        
+
         <header class="header">
             <?php if (is_single()):?>
             <?php get_template_part('template-parts/posthero');?>
