@@ -1338,8 +1338,7 @@ blockquote {
 }
 @media only screen and (max-width: 37.5em) {
   .scroll-image .single-image {
-    background-position: 47%;
-    height: 80vh;
+    background-attachment: unset;
   }
 }
 
@@ -1776,6 +1775,12 @@ blockquote {
   position: sticky;
   top: 70px;
 }
+@media only screen and (max-width: 37.5em) {
+  .post-image {
+    position: unset;
+  }
+}
+
 .post-items {
   padding: 15%;
 }
@@ -3695,12 +3700,12 @@ footer .w90 {
   margin: 0;
   list-style: none;
   position: relative;
-  margin-top: 150px;
+  margin-top: 10%;
   text-align: center;
 }
 
 .sidebar-item {
-  margin: 30px 0;
+  margin: 2rem 0;
   opacity: 0;
   -webkit-transform: translateY(-20px);
           transform: translateY(-20px);

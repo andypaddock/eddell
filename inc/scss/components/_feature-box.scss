@@ -291,8 +291,7 @@
     @include backgroundPara;
     height: 45rem;
     @include respond(phone) {
-      background-position: 47%;
-      height: 80vh;
+      background-attachment: unset;
     }
   }
 }

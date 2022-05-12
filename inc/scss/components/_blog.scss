@@ -96,7 +96,7 @@
   position: sticky;
   top: 70px;
   @include respond(phone) {
-
+position: unset;
   }
 }
 .post-items {
