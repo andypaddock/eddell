@@ -47,21 +47,13 @@ if( $link ):
                             <a class="button" href="<?php echo esc_url( $link_url ); ?>"
                                 target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
                             <?php endif; ?>
-
-
                         </div>
-
                     </div>
-
-
-
-
-
-
                     <?php endwhile; ?>
                     <?php endif; ?>
 
                 </div>
+                <h4><?php the_sub_field('image_credit'); ?></h4>
                 <div class="row arrow-holder">
                     <div class="down_arrow">
                         <div class="arrow bounce">

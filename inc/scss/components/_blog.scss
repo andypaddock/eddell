@@ -100,12 +100,15 @@ position: unset;
   }
 }
 .post-items {
-  padding: 15%;
+  padding: 6rem 15%;
   @include respond(tab-land) {
 padding: 6rem;
   }
   .arrow-holder {
     padding-top: 5rem;
+  }
+  h4 {
+    padding: 6rem 0 0;
   }
 }
 .news-item {

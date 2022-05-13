@@ -63,7 +63,8 @@
             </nav>
         </div>
 
-
+        <?php $headerOff = get_field('remove_header');?>
+        <?php if($headerOff == false): ?>
         <header class="header">
             <?php if (is_single()):?>
             <?php get_template_part('template-parts/posthero');?>
@@ -71,7 +72,7 @@
             <?php get_template_part('template-parts/hero');?>
             <?php endif; ?>
         </header>
-
+        <?php endif; ?>
 
 
 

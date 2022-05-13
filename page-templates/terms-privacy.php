@@ -5,40 +5,24 @@
  * @package ridgeway
  */
 get_header();?>
-<div class="row">
-    <div class="container">
-        <div class="terms-side-bar">
-            <div class="feather-icon">
-                <?php get_template_part("inc/img/featherlogo");?></div>
-        </div>
-        <div class="terms">
+<section class="post-content">
+    <div class="row w60">
+        <div class="flex-container">
+            <?php
+ 
+if ( have_posts() ) : 
+    while ( have_posts() ) : the_post();
+        // the_content();
+        get_template_part('template-parts/postcontent');
+        endwhile;
+        else :
+        _e( 'Sorry, no posts matched your criteria.', 'textdomain' );
+        endif;
 
-            <h2 class="heading-secondary"><?php the_field("page_heading"); ?></h2>
-            <?php the_field("main_body_text"); ?>
-
-            <?php if( have_rows('legal_terms_block') ): ?>
-            <?php while( have_rows('legal_terms_block') ): the_row(); ?>
-
-            <div class="terms__section">
-                <h2 class="heading-secondary-sub"><?php the_sub_field('title'); ?></h2>
-
-
-                <?php if( have_rows('legal_terms') ): ?>
-                <?php while( have_rows('legal_terms') ): the_row(); ?>
-                <div class="terms__block">
-                    <div class="terms__title">
-                        <p><strong><?php the_sub_field('term_title'); ?></strong></p>
-                    </div>
-                    <div class="terms__copy"><?php the_sub_field('term_copy'); ?></div>
-                </div>
-                <?php endwhile; ?>
-                <?php endif; ?>
-            </div>
-            <?php endwhile; ?>
-            <?php endif; ?>
+        ?>
 
         </div>
     </div>
-</div>
+</section>
 
 <?php get_footer();?>

@@ -1491,6 +1491,10 @@ blockquote {
   }
 }
 
+.contact-block div.wpforms-container-full .wpforms-form .wpforms-submit-container {
+  position: unset;
+}
+
 .popup {
   height: 100vh;
   width: 100%;
@@ -1782,7 +1786,7 @@ blockquote {
 }
 
 .post-items {
-  padding: 15%;
+  padding: 6rem 15%;
 }
 @media only screen and (max-width: 75em) {
   .post-items {
@@ -1791,6 +1795,9 @@ blockquote {
 }
 .post-items .arrow-holder {
   padding-top: 5rem;
+}
+.post-items h4 {
+  padding: 6rem 0 0;
 }
 
 .news-item {
@@ -2087,6 +2094,10 @@ blockquote {
 
 .row.para-image {
   padding: 3rem 0;
+}
+
+.standard-text .text-container {
+  padding: 6rem 0;
 }
 
 .tabbed-section__head {
@@ -2898,13 +2909,15 @@ blockquote {
 .footer .footer-hero .footer-contact .footer-newsletter p {
   font-size: 1.2rem;
   width: 60%;
-  margin-top: -4rem;
 }
 @media only screen and (max-width: 37.5em) {
   .footer .footer-hero .footer-contact .footer-newsletter p {
     width: unset;
     margin: 0;
   }
+}
+.footer .footer-hero .footer-contact .footer-newsletter p:last-of-type {
+  margin-top: -4rem;
 }
 @media only screen and (max-width: 37.5em) {
   .footer .footer-hero .footer-contact .footer-newsletter .mc4wp-form-fields {

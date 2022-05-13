@@ -60,6 +60,8 @@ get_header(); ?>
 <?php get_template_part('template-parts/test_and_image');?>
 <?php elseif( get_row_layout() == 'scroll_image' ):?>
 <?php get_template_part('template-parts/scroll_image');?>
+<?php elseif( get_row_layout() == 'standard_text' ):?>
+<?php get_template_part('template-parts/standard_text');?>
 <?php endif; ?>
 <?php endwhile; ?>
 <?php endif; ?>
