@@ -18,7 +18,7 @@
                                 <h2 class="heading-primary">
                                     <?php the_field('footer_main_text','options'); ?>
 
-                                    <div class="slash">&#183;</div>
+                                    <div class="slash"></div>
                                 </h2>
                             </div>
                             <div class="contact-address">

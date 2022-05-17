@@ -16,5 +16,5 @@ if(get_sub_field('white_text'))
 
 
     </div>
-    <div class="slash">&#183;</div>
+    <div class="slash"></div>
 </section>

@@ -17,7 +17,7 @@ $image = get_sub_field('image'); ?>
                         <span class="heading-secondary--sub"><?php the_sub_field('sub_header'); ?></span>
                     </h2>
                 </div>
-                <div class="slash">&#183;</div>
+                <div class="slash"></div>
                 <div class="scroll-text-content"><?php the_sub_field('scrolling_text'); ?></div>
                 <div class="down_arrow">
                     <div class="arrow bounce">

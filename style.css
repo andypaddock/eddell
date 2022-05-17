@@ -1495,6 +1495,14 @@ blockquote {
   position: unset;
 }
 
+.wpforms-confirmation-container-full.wpforms-confirmation-scroll p {
+  margin: 0 !important;
+}
+
+.wpforms-confirmation-container-full.wpforms-confirmation-scroll {
+  margin-bottom: 6rem;
+}
+
 .popup {
   height: 100vh;
   width: 100%;
